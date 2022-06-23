@@ -13,7 +13,7 @@ namespace CPCAIModule
     public partial class Form20 : Form
     {
         //共用變數
-        string SqlStr = "";
+        //string SqlStr = "";
 
         public Form20()
         {

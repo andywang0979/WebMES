@@ -407,3 +407,5 @@ F:\bin\CPCAIModule.pdb
 D:\CPC中國生產力中心\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Form20.resources
 D:\CPC中國生產力中心\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Form21.resources
 D:\CPC中國生產力中心\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Form22.resources
+D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.exe
+D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.pdb
