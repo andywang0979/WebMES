@@ -13,7 +13,7 @@ namespace CPCAIModule
     public partial class Form20 : Form
     {
         //共用變數
-        //string SqlStr = "";
+        string SqlStr = "";
 
         public Form20()
         {
@@ -24,19 +24,19 @@ namespace CPCAIModule
         {
             //column_num:總共幾個欄位
             //C# 數字陣列 column_width
-            for (int i = 0; i < column_num; i++)
-            {
-                if (dgvDetail2.Columns[i].ValueType == typeof(string)) //若是字串
-                {
-                    dgvDetail2.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                }
-                else
-                {
-                    dgvDetail2.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                }
-                //定義每個欄位寬度
-                dgvDetail2.Columns[i].Width = column_width[i];
-            }
+            //for (int i = 0; i < column_num; i++)
+            //{
+            //    if (dgvDetail2.Columns[i].ValueType == typeof(string)) //若是字串
+            //    {
+            //        dgvDetail2.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //    }
+            //    else
+            //    {
+            //        dgvDetail2.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            //    }
+            //    //定義每個欄位寬度
+            //    dgvDetail2.Columns[i].Width = column_width[i];
+            //}
         }
 
         /// <summary>查詢函式</summary>
