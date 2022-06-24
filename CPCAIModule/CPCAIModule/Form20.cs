@@ -14,6 +14,7 @@ namespace CPCAIModule
     {
         //共用變數
         string SqlStr = "";
+        string msg = "";
 
         public Form20()
         {
@@ -139,11 +140,7 @@ namespace CPCAIModule
         //查詢
         private void button1_Click(object sender, EventArgs e)
         {
-            string where_A = "";
-            if (this.txt1.Text.Trim() != "") //員工代號
-                where_A = "and A.Emp_Code like '%" + txt1.Text.Trim() + "%'";
 
-            Form_Query(where_A);
         }
         //清除
         private void button5_Click(object sender, EventArgs e)
@@ -277,9 +274,21 @@ namespace CPCAIModule
             this.Hide();
             FmMenu fm = new FmMenu();
             fm.Show();
-
         }
-
+        //員工編號: 查
+        private void button7_Click(object sender, EventArgs e)
+        {
+            InputBox_Emp input = new InputBox_Emp();
+            DialogResult dr = input.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                this.txt1.Text = input.GetMsg();
+            }
+            else 
+            {
+                this.txt1.Text = msg.Trim();
+            }
+        }
 
     }
 }
