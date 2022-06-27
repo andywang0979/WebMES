@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Security.Principal; 
+using System.Security.Principal;
 
 namespace CPCAIModule
 {
@@ -44,14 +44,18 @@ namespace CPCAIModule
         /// <param name="where_str">查詢字串</param>      
         private void Form_Query(string where_str)
         {
-            SqlStr = "Select A.Emp_Code as '員工代號',"
+            SqlStr = "Select A.Emp_Code as '員工編號',"
                 + "A.Raters as '受評人員',"
-                + "A.Ws_Code as '工站代號',"
+                + "A.Ws_Code as '工站編號',"
                 + "A.Ws_Name as '工站名稱',"
                 + "A.Skill_Eva as '技能評比',"
-                + "A.Ass_Code as '評核員代號',"
+                + "A.Ass_Code as '評核員編號',"
                 + "A.Assessor as '評核員',"
-                + "A.Ass_Date '評核日期'"
+                + "convert(varchar,A.Ass_Date,111) as '評核日期',"
+                + "A.SNo as '建檔者編號',"
+                + "A.SDate as '建檔者時間',"
+                + "A.UNo as '修改者編號',"
+                + "A.UDate as '修改者時間'"
                 + "from Per_Fun_Data A"
                 + " where 1=1";
 
@@ -87,6 +91,10 @@ namespace CPCAIModule
             {
                 where_A = "and A.Emp_Code like'%" + textBox8.Text.Trim() + "%'";
             }
+            if (this.textBox1.Text.Trim() != "")
+            {
+                where_A = where_A + "and A.Ws_Code like'%" + textBox1.Text.Trim() + "%'";
+            }
             Form_Query(where_A);
         }
         //初始化
@@ -101,11 +109,11 @@ namespace CPCAIModule
             //button2
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", comboBox1, "where goods_MachineNo<>''");
             // this.comboBox1.SelectedIndex = 0;
-            
+
             string LoginAccount = Loginfm.id;
             //登入者帳號指定給txt6欄位
             this.txt6.Text = LoginAccount;
-      
+
             button6_Click(sender, e);
         }
         //點擊資料
@@ -114,14 +122,14 @@ namespace CPCAIModule
             //如果沒有欄位資料就中斷
             if (e.ColumnIndex < 0 || e.RowIndex < 0) return;
             //員工代號
-            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工代號"].Value.ToString().Trim();
+            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工編號"].Value.ToString().Trim();
 
             this.label_No.Text = this.txt1.Text;
 
             //受評人員
             this.txt4.Text = dgvDetail2.Rows[e.RowIndex].Cells["受評人員"].Value.ToString().Trim();
-            //工站代號
-            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站代號"].Value.ToString().Trim();
+            //工站編號
+            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
             //工站名稱
             this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
             //技能評比 //下拉選單
@@ -129,18 +137,42 @@ namespace CPCAIModule
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["技能評比"].Value.ToString().Trim();
             string[,] arr_kind = { { "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" } };
             Class1.cbo_choose(arr_kind, kind, comboBox1);
-            //評核員代號
-            this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核員代號"].Value.ToString().Trim();
+            //評核員編號
+            this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核員編號"].Value.ToString().Trim();
             //評核員
             this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核員"].Value.ToString().Trim();
             //評核日期
-            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核日期"].Value.ToString().Trim();
+            this.dateTimePicker1.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核日期"].Value.ToString().Trim();
+            //建檔者編號
+            this.txt10.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者編號"].Value.ToString().Trim();
+            //建檔者時間
+            this.txt11.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者時間"].Value.ToString().Trim();
+            //修改者編號
+            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
+            //修改者時間
+            this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+
+            //if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim() == "---")
+            //{
+            //    this.dateTimePicker1.Enabled = false;
+            //    this.txt8.Enabled = false;
+            //    this.dateTimePicker1.Value = Convert.ToDateTime("1900/01/01");
+            //    this.txt8.Text = "00:00";
+            //}
+            //else 
+            //{
+
+            //}
         }
 
         //查詢
         private void button1_Click(object sender, EventArgs e)
         {
+            string where_A = "";
+            if (this.txt1.Text.Trim() != "") //員工編號
+                where_A = "and A.Emp_Code like '%" + txt1.Text.Trim() + "%'";
 
+            Form_Query(where_A);
         }
         //清除
         private void button5_Click(object sender, EventArgs e)
@@ -149,7 +181,8 @@ namespace CPCAIModule
             this.txt3.Text = "";
             //this.txt8.Text = ""; 
             this.txt5.Text = "";
-            this.txt6.Text = ""; this.txt7.Text = "";
+            this.txt6.Text = ""; 
+            //this.txt7.Text = "";
             this.comboBox1.SelectedIndex = 0;
             this.label_No.Text = "";
         }
@@ -159,7 +192,7 @@ namespace CPCAIModule
             bool isOK = true;
             if (txt1.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『員工代號』資料...");
+                MessageBox.Show("請先輸入『員工編號』資料...");
                 return false;
             }
             if (txt4.Text.Trim() == "")
@@ -192,11 +225,11 @@ namespace CPCAIModule
                 MessageBox.Show("請先輸入『評核員』資料...");
                 return false;
             }
-            if (txt7.Text.Trim() == "")
-            {
-                MessageBox.Show("請先輸入『評核日期』資料...");
-                return false;
-            }
+            //if (txt7.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("請先輸入『評核日期』資料...");
+            //    return false;
+            //}
             return isOK;
         }
         //新增
@@ -284,7 +317,7 @@ namespace CPCAIModule
             {
                 this.txt1.Text = input.GetMsg();
             }
-            else 
+            else
             {
                 this.txt1.Text = msg.Trim();
             }

@@ -35,16 +35,17 @@
             this.txt4 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txt8 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button7 = new System.Windows.Forms.Button();
             this.txt11 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txt7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDetail2 = new System.Windows.Forms.DataGridView();
-            this.button7 = new System.Windows.Forms.Button();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -159,17 +160,18 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker3);
+            this.splitContainer2.Panel1.Controls.Add(this.txt8);
+            this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker1);
             this.splitContainer2.Panel1.Controls.Add(this.button7);
             this.splitContainer2.Panel1.Controls.Add(this.txt11);
             this.splitContainer2.Panel1.Controls.Add(this.label12);
             this.splitContainer2.Panel1.Controls.Add(this.txt10);
             this.splitContainer2.Panel1.Controls.Add(this.label13);
-            this.splitContainer2.Panel1.Controls.Add(this.textBox2);
             this.splitContainer2.Panel1.Controls.Add(this.label14);
-            this.splitContainer2.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer2.Panel1.Controls.Add(this.txt7);
             this.splitContainer2.Panel1.Controls.Add(this.label15);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer2.Panel1.Controls.Add(this.txt7);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             this.splitContainer2.Panel1.Controls.Add(this.txt6);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
@@ -196,6 +198,34 @@
             this.splitContainer2.Size = new System.Drawing.Size(877, 360);
             this.splitContainer2.SplitterDistance = 246;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // txt8
+            // 
+            this.txt8.Font = new System.Drawing.Font("新細明體", 12F);
+            this.txt8.Location = new System.Drawing.Point(603, 192);
+            this.txt8.Name = "txt8";
+            this.txt8.Size = new System.Drawing.Size(45, 27);
+            this.txt8.TabIndex = 2355;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(449, 131);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(149, 27);
+            this.dateTimePicker1.TabIndex = 2354;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button7.Location = new System.Drawing.Point(288, 37);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(22, 26);
+            this.button7.TabIndex = 2353;
+            this.button7.Text = "查";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // txt11
             // 
@@ -233,15 +263,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 20);
             this.label13.TabIndex = 2290;
-            this.label13.Text = "建檔者代號:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("新細明體", 12F);
-            this.textBox2.Location = new System.Drawing.Point(449, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 27);
-            this.textBox2.TabIndex = 2289;
+            this.label13.Text = "建檔者編號:";
             // 
             // label14
             // 
@@ -254,13 +276,13 @@
             this.label14.TabIndex = 2288;
             this.label14.Text = "修改者時間:";
             // 
-            // textBox3
+            // txt7
             // 
-            this.textBox3.Font = new System.Drawing.Font("新細明體", 12F);
-            this.textBox3.Location = new System.Drawing.Point(449, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 27);
-            this.textBox3.TabIndex = 2287;
+            this.txt7.Font = new System.Drawing.Font("新細明體", 12F);
+            this.txt7.Location = new System.Drawing.Point(449, 161);
+            this.txt7.Name = "txt7";
+            this.txt7.Size = new System.Drawing.Size(148, 27);
+            this.txt7.TabIndex = 2287;
             // 
             // label15
             // 
@@ -271,7 +293,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(93, 20);
             this.label15.TabIndex = 2286;
-            this.label15.Text = "修改者代號:";
+            this.label15.Text = "修改者編號:";
             // 
             // comboBox1
             // 
@@ -287,15 +309,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(148, 28);
             this.comboBox1.TabIndex = 2285;
-            // 
-            // txt7
-            // 
-            this.txt7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt7.Location = new System.Drawing.Point(448, 130);
-            this.txt7.Margin = new System.Windows.Forms.Padding(2);
-            this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(148, 27);
-            this.txt7.TabIndex = 2284;
             // 
             // label8
             // 
@@ -346,7 +359,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 20);
             this.label6.TabIndex = 2279;
-            this.label6.Text = "評核員代號:";
+            this.label6.Text = "評核員編號:";
             // 
             // label5
             // 
@@ -397,7 +410,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 2274;
-            this.label3.Text = "工站代號:";
+            this.label3.Text = "工站編號:";
             // 
             // button1
             // 
@@ -408,6 +421,7 @@
             this.button1.TabIndex = 2234;
             this.button1.Text = "查詢";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -493,7 +507,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 2275;
-            this.label11.Text = "工站代號:";
+            this.label11.Text = "工站編號:";
             // 
             // button6
             // 
@@ -503,7 +517,6 @@
             this.button6.TabIndex = 2233;
             this.button6.Text = "快查";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox8
@@ -521,7 +534,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 2232;
-            this.label9.Text = "員工代號:";
+            this.label9.Text = "員工編號:";
             // 
             // dgvDetail2
             // 
@@ -534,17 +547,13 @@
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
             // 
-            // button7
+            // dateTimePicker3
             // 
-            this.button7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(288, 37);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(22, 26);
-            this.button7.TabIndex = 2353;
-            this.button7.Text = "查";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.dateTimePicker3.Font = new System.Drawing.Font("新細明體", 12F);
+            this.dateTimePicker3.Location = new System.Drawing.Point(448, 193);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(149, 27);
+            this.dateTimePicker3.TabIndex = 2357;
             // 
             // Form20
             // 
@@ -591,7 +600,6 @@
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt6;
         private System.Windows.Forms.Label label7;
@@ -615,10 +623,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txt8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }

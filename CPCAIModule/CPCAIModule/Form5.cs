@@ -156,8 +156,10 @@ namespace CPCAIModule
             //日期時間
             if (dgvDetail2.Rows[e.RowIndex].Cells["預計到料時間"].Value.ToString().Trim() == "---")
             {
-                this.dateTimePicker1.Enabled = false; this.txt14.Enabled = false;
-                this.dateTimePicker1.Value = Convert.ToDateTime("1900/01/01"); this.txt14.Text = "00:00";
+                this.dateTimePicker1.Enabled = false;
+                this.txt14.Enabled = false;
+                this.dateTimePicker1.Value = Convert.ToDateTime("1900/01/01"); 
+                this.txt14.Text = "00:00";
             }
             else
             {
