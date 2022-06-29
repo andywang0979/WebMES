@@ -70,7 +70,7 @@ namespace CPCAIModule
             System.Data.DataTable dt = Class1.GetDataTable(SqlStr);
             dgvDetail2.DataSource = dt;
 
-            int column_num = 17;//總共0-14共15個欄位
+            int column_num = 17;//總共0-16共17個欄位
             int[] column_width = { 110, 80, 40, 200, 100, 300, 70, 80, 80, 60, 80, 80, 110, 90, 110, 250, 80, 160 };//欄寬值
             Columns_for(column_num, column_width);
             
@@ -105,7 +105,8 @@ namespace CPCAIModule
             //下拉選項            
             Class1.DropDownList_A("Order_No", "goods_Name", "Cus_Order", CB1, "where IsClose='N'");
             Class1.DropDownList_B("goods_No", "Backup_Hub", comboBox1, "where goods_Name<>''");
-            if (comboBox1.Items.Count>0) this.comboBox1.SelectedIndex = 0; this.CB1.SelectedIndex = 0;
+            if (comboBox1.Items.Count>0) this.comboBox1.SelectedIndex = 0;
+            this.CB1.SelectedIndex = 0;
             button2_Click(sender, e);//查詢
             button7_Click(sender, e);//清除            
         }
@@ -127,7 +128,7 @@ namespace CPCAIModule
             this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["製品規格"].Value.ToString().Trim();
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["需求量"].Value.ToString().Trim();
             this.txt10.Text = dgvDetail2.Rows[e.RowIndex].Cells["單位"].Value.ToString().Trim();
-            //現有數
+            //現有數量
             this.txt8.Text = dgvDetail2.Rows[e.RowIndex].Cells["現有數量"].Value.ToString().Trim();
             this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["欠料數量"].Value.ToString().Trim();
             //發料頻率

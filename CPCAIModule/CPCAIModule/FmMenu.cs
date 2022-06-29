@@ -157,27 +157,34 @@ namespace CPCAIModule
             Form18 fm = new Form18();
             fm.Show();
         }
-
+        //工站職能需求建檔作業
         private void button21_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Form19 fm = new Form19();
             fm.Show();
         }
-
+        //人員職能建檔作業
         private void button22_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form20 fm = new Form20();
             fm.Show();
         }
-
+        //人員派工資料作業
         private void button23_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form21 fm = new Form21();
             fm.Show();
 
+        }
+        //人員工時資料作業
+        private void button24_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form22 fm = new Form22();
+            fm.Show();
         }
     }
 }

@@ -31,7 +31,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txt7 = new System.Windows.Forms.TextBox();
             this.label_No = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvDetail2 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -58,6 +56,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.dgvDetail2 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,8 +72,8 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,8 +103,14 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.label14);
+            this.splitContainer2.Panel1.Controls.Add(this.label13);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer2.Panel1.Controls.Add(this.label12);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox2);
+            this.splitContainer2.Panel1.Controls.Add(this.label11);
+            this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker1);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer2.Panel1.Controls.Add(this.txt7);
             this.splitContainer2.Panel1.Controls.Add(this.label_No);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
             this.splitContainer2.Panel1.Controls.Add(this.label3);
@@ -112,6 +124,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.txt3);
             this.splitContainer2.Panel1.Controls.Add(this.label4);
+            this.splitContainer2.Panel1.Font = new System.Drawing.Font("新細明體", 12F);
             // 
             // splitContainer2.Panel2
             // 
@@ -136,15 +149,6 @@
             this.comboBox1.Size = new System.Drawing.Size(148, 28);
             this.comboBox1.TabIndex = 2307;
             // 
-            // txt7
-            // 
-            this.txt7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt7.Location = new System.Drawing.Point(144, 139);
-            this.txt7.Margin = new System.Windows.Forms.Padding(2);
-            this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(148, 27);
-            this.txt7.TabIndex = 2306;
-            // 
             // label_No
             // 
             this.label_No.AutoSize = true;
@@ -161,7 +165,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(94, 146);
+            this.label7.Location = new System.Drawing.Point(94, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 20);
             this.label7.TabIndex = 2305;
@@ -256,7 +260,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 2294;
-            this.label2.Text = "工站代號:";
+            this.label2.Text = "工站編號:";
             // 
             // txt3
             // 
@@ -276,16 +280,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 2298;
-            this.label4.Text = "員工代號:";
-            // 
-            // dgvDetail2
-            // 
-            this.dgvDetail2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetail2.Location = new System.Drawing.Point(8, 7);
-            this.dgvDetail2.Name = "dgvDetail2";
-            this.dgvDetail2.RowTemplate.Height = 24;
-            this.dgvDetail2.Size = new System.Drawing.Size(857, 240);
-            this.dgvDetail2.TabIndex = 0;
+            this.label4.Text = "員工編號:";
             // 
             // label10
             // 
@@ -405,7 +400,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 20);
             this.label9.TabIndex = 2232;
-            this.label9.Text = "產品機型：";
+            this.label9.Text = "工單號碼：";
             // 
             // button2
             // 
@@ -418,6 +413,81 @@
             this.button2.TabIndex = 2231;
             this.button2.Text = "快查";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dgvDetail2
+            // 
+            this.dgvDetail2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetail2.Location = new System.Drawing.Point(8, 7);
+            this.dgvDetail2.Name = "dgvDetail2";
+            this.dgvDetail2.RowTemplate.Height = 24;
+            this.dgvDetail2.Size = new System.Drawing.Size(857, 240);
+            this.dgvDetail2.TabIndex = 0;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(144, 137);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(158, 27);
+            this.dateTimePicker1.TabIndex = 2308;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox2.Location = new System.Drawing.Point(144, 169);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(148, 27);
+            this.textBox2.TabIndex = 2310;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(110, 173);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 20);
+            this.label11.TabIndex = 2309;
+            this.label11.Text = "(起)";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox3.Location = new System.Drawing.Point(348, 169);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(148, 27);
+            this.textBox3.TabIndex = 2312;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(318, 172);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 20);
+            this.label12.TabIndex = 2311;
+            this.label12.Text = "(迄)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(28, 176);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 16);
+            this.label13.TabIndex = 2313;
+            this.label13.Text = "生產期間:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(297, 175);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(16, 16);
+            this.label14.TabIndex = 2314;
+            this.label14.Text = "~";
             // 
             // Form22
             // 
@@ -426,7 +496,8 @@
             this.ClientSize = new System.Drawing.Size(877, 618);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form22";
-            this.Text = "Form22";
+            this.Text = "Form22-人員工時資料作業";
+            this.Load += new System.EventHandler(this.Form22_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -437,9 +508,9 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,7 +520,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.DataGridView dgvDetail2;
-        private System.Windows.Forms.TextBox txt7;
         private System.Windows.Forms.Label label_No;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
@@ -476,5 +546,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

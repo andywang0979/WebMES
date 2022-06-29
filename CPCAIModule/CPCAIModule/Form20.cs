@@ -53,9 +53,9 @@ namespace CPCAIModule
                 + "A.Assessor as '評核員',"
                 + "convert(varchar,A.Ass_Date,111) as '評核日期',"
                 + "A.SNo as '建檔者編號',"
-                + "A.SDate as '建檔者時間',"
+                + "convert(varchar, A.SDate, 120) as '建檔者時間',"
                 + "A.UNo as '修改者編號',"
-                + "A.UDate as '修改者時間'"
+                + "substring(convert(varchar,A.UDate,121),1,16) as '修改者時間'"
                 + "from Per_Fun_Data A"
                 + " where 1=1";
 
@@ -146,11 +146,12 @@ namespace CPCAIModule
             //建檔者編號
             this.txt10.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者編號"].Value.ToString().Trim();
             //建檔者時間
-            this.txt11.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者時間"].Value.ToString().Trim();
+            this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者時間"].Value.ToString().Trim();
             //修改者編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
             //修改者時間
             this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+            this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
 
             //if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim() == "---")
             //{
@@ -315,12 +316,18 @@ namespace CPCAIModule
             DialogResult dr = input.ShowDialog();
             if (dr == DialogResult.OK)
             {
-                this.txt1.Text = input.GetMsg();
+                this.txt4.Text = input.GetMsg();
             }
             else
             {
-                this.txt1.Text = msg.Trim();
+                this.txt4.Text = msg.Trim();
             }
+        }
+
+        private void txt8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                txt4.Focus();
         }
 
     }
