@@ -150,21 +150,17 @@ namespace CPCAIModule
             //修改者編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
             //修改者時間
+            //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+            //this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
+
             this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
-            this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
-
-            //if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim() == "---")
-            //{
-            //    this.dateTimePicker1.Enabled = false;
-            //    this.txt8.Enabled = false;
-            //    this.dateTimePicker1.Value = Convert.ToDateTime("1900/01/01");
-            //    this.txt8.Text = "00:00";
-            //}
-            //else 
-            //{
-
-            //}
+            if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value == DBNull.Value)
+                this.txt8.Text = "";
+            else
+                this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
         }
+
+
 
         //查詢
         private void button1_Click(object sender, EventArgs e)
@@ -182,7 +178,7 @@ namespace CPCAIModule
             this.txt3.Text = "";
             //this.txt8.Text = ""; 
             this.txt5.Text = "";
-            this.txt6.Text = ""; 
+            this.txt6.Text = "";
             //this.txt7.Text = "";
             this.comboBox1.SelectedIndex = 0;
             this.label_No.Text = "";
@@ -246,17 +242,20 @@ namespace CPCAIModule
             }
             //Insert
             SqlStr = "Insert into Per_Fun_Data"
-                + "(Emp_Code, Raters, Ws_Code, Ws_Name, Skill_Eva, Ass_Code, Assessor, Ass_Date)"
+                + "(Emp_Code, Raters, Ws_Code, Ws_Name, Skill_Eva, Ass_Code, Assessor, Ass_Date,SNo,SDate,UNo,UDate)"
                 + "values("
                 + "'" + txt1.Text.Trim() + "',"
                 + "'" + txt4.Text.Trim() + "',"
                 + "'" + txt2.Text.Trim() + "',"
-                + "'" + txt3.Text.Trim() + "',"
-                //+ "'" + txt8.Text.Trim() + "',"
+                + "'" + txt3.Text.Trim() + "',"                
                 + "'" + comboBox1.SelectedItem.ToString().Trim() + "'," //技能評比
                 + "'" + txt5.Text.Trim() + "',"
                 + "'" + txt6.Text.Trim() + "',"
-                + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "'"
+                + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
+                + "'" + txt10.Text.Trim() + "',"
+                + "'" + txt7.Text.Trim() + "',"
+                + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
+                + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
                 + ")";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("新增資料完成...");
@@ -324,11 +323,11 @@ namespace CPCAIModule
             }
         }
 
-        private void txt8_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13)
-                txt4.Focus();
-        }
+        //private void txt8_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (e.KeyChar == 13)
+        //        txt4.Focus();
+        //}
 
     }
 }

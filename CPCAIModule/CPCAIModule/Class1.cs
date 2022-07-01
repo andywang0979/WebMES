@@ -207,6 +207,7 @@ namespace CPCAIModule
         }
 
         /// <summary>取得行列數</summary>
+        /// <param name="table">資料表</param>  
         /// <param name="wherestr">查詢字串</param>  
         public static int GetRowCount(string table, string wherestr)
         {

@@ -35,6 +35,7 @@
             this.txt4 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txt9 = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.txt8 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -69,7 +70,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDetail2 = new System.Windows.Forms.DataGridView();
-            this.txt9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -201,6 +201,14 @@
             this.splitContainer2.SplitterDistance = 319;
             this.splitContainer2.TabIndex = 0;
             // 
+            // txt9
+            // 
+            this.txt9.Font = new System.Drawing.Font("新細明體", 12F);
+            this.txt9.Location = new System.Drawing.Point(136, 232);
+            this.txt9.Name = "txt9";
+            this.txt9.Size = new System.Drawing.Size(148, 27);
+            this.txt9.TabIndex = 2358;
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Font = new System.Drawing.Font("新細明體", 12F);
@@ -214,9 +222,8 @@
             this.txt8.Font = new System.Drawing.Font("新細明體", 12F);
             this.txt8.Location = new System.Drawing.Point(612, 232);
             this.txt8.Name = "txt8";
-            this.txt8.Size = new System.Drawing.Size(45, 27);
+            this.txt8.Size = new System.Drawing.Size(97, 27);
             this.txt8.TabIndex = 2355;
-            this.txt8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt8_KeyPress);
             // 
             // dateTimePicker1
             // 
@@ -551,14 +558,6 @@
             this.dgvDetail2.Size = new System.Drawing.Size(877, 174);
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
-            // 
-            // txt9
-            // 
-            this.txt9.Font = new System.Drawing.Font("新細明體", 12F);
-            this.txt9.Location = new System.Drawing.Point(136, 232);
-            this.txt9.Name = "txt9";
-            this.txt9.Size = new System.Drawing.Size(148, 27);
-            this.txt9.TabIndex = 2358;
             // 
             // Form20
             // 
