@@ -319,7 +319,7 @@ namespace CPCAIModule
             + "'" + txt6.Text.Trim() + "',"
             + "" + txt7.Text.Trim() + ","
             + "'" + txt9.Text.Trim() + "',"
-            //+ "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
+            + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
             + "'" + txt4.Text.Trim() + "',"
             + "'" + Loginfm.id.Trim() + "',"
             + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"

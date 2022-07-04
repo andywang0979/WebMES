@@ -112,7 +112,7 @@ namespace CPCAIModule
 
             string LoginAccount = Loginfm.id;
             //登入者帳號指定給txt6欄位
-            this.txt6.Text = LoginAccount;
+            this.txt5.Text = LoginAccount;
 
             button6_Click(sender, e);
         }
@@ -160,8 +160,6 @@ namespace CPCAIModule
                 this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
         }
 
-
-
         //查詢
         private void button1_Click(object sender, EventArgs e)
         {
@@ -174,13 +172,19 @@ namespace CPCAIModule
         //清除
         private void button5_Click(object sender, EventArgs e)
         {
-            this.txt1.Text = ""; this.txt4.Text = ""; this.txt2.Text = "";
-            this.txt3.Text = "";
-            //this.txt8.Text = ""; 
+            this.txt1.Text = ""; 
+            this.txt4.Text = ""; 
+            this.txt2.Text = "";
+            this.txt3.Text = "";           
+            this.comboBox1.SelectedIndex = 0;
             this.txt5.Text = "";
             this.txt6.Text = "";
-            //this.txt7.Text = "";
-            this.comboBox1.SelectedIndex = 0;
+            this.dateTimePicker1.Value = DateTime.Now;
+            this.txt10.Text = ""; 
+            this.txt7.Text = "";
+            this.txt9.Text = "";
+            this.dateTimePicker3.Value = DateTime.Now;
+            
             this.label_No.Text = "";
         }
         //檢查空欄位
@@ -199,7 +203,7 @@ namespace CPCAIModule
             }
             if (txt2.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『工站代號』資料...");
+                MessageBox.Show("請先輸入『工站編號』資料...");
                 return false;
             }
             if (txt3.Text.Trim() == "")
@@ -214,7 +218,7 @@ namespace CPCAIModule
             }
             if (txt5.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『評核員代號』資料...");
+                MessageBox.Show("請先輸入『評核員編號』資料...");
                 return false;
             }
             if (txt6.Text.Trim() == "")
@@ -252,10 +256,10 @@ namespace CPCAIModule
                 + "'" + txt5.Text.Trim() + "',"
                 + "'" + txt6.Text.Trim() + "',"
                 + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
-                + "'" + txt10.Text.Trim() + "',"
-                + "'" + txt7.Text.Trim() + "',"
+                + "'" + txt10.Text.Trim() + "',"              
                 + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
-                + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                + "'" + txt7.Text.Trim() + "',"
+                 + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "'"
                 + ")";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("新增資料完成...");
@@ -322,12 +326,5 @@ namespace CPCAIModule
                 this.txt4.Text = msg.Trim();
             }
         }
-
-        //private void txt8_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == 13)
-        //        txt4.Focus();
-        //}
-
     }
 }

@@ -250,6 +250,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormInputMsg_Pfd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputMsg_Pfd.designer.cs">
+      <DependentUpon>FormInputMsg_Pfd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FmBase1.resx">
       <DependentUpon>FmBase1.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +361,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormInputMsg_Pfd.resx">
+      <DependentUpon>FormInputMsg_Pfd.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

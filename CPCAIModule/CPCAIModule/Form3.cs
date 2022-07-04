@@ -195,11 +195,11 @@ namespace CPCAIModule
                 MessageBox.Show("請先輸入『訂單數量』資料...");
                 return false;
             }
-            if (txt11.Text.Trim() == "")
-            {
-                MessageBox.Show("請先輸入『單位』資料...");
-                return false;
-            }
+            //if (txt11.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("請先輸入『單位』資料...");
+            //    return false;
+            //}
             //判斷是否為數字
             int n;
             if (Int32.TryParse(txt7.Text.Trim(), out n) == false)

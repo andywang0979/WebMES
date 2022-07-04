@@ -445,3 +445,4 @@ D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.FormPop.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Loginfm.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Properties.Resources.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.csproj.GenerateResource.Cache
+D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.InputBox_Pfd.resources
