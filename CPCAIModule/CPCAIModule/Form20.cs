@@ -14,13 +14,16 @@ namespace CPCAIModule
     {
         //共用變數
         string SqlStr = "";
-        string msg = "";
+        public static string msg = "";
 
         public Form20()
         {
             InitializeComponent();
         }
-        //定義每個欄位寬度
+        
+        /// <summary>定義每個欄位寬度</summary>
+        /// <param name="column_num">欄位數</param>
+        /// <param name="column_width">欄位寬度</param> 
         private void Columns_for(int column_num, int[] column_width)
         {
             //column_num:總共幾個欄位
@@ -312,19 +315,27 @@ namespace CPCAIModule
             FmMenu fm = new FmMenu();
             fm.Show();
         }
-        //員工編號: 查
+        //查
         private void button7_Click(object sender, EventArgs e)
         {
-            InputBox_Emp input = new InputBox_Emp();
+            InputBox_Pfd input = new InputBox_Pfd();
             DialogResult dr = input.ShowDialog();
             if (dr == DialogResult.OK)
             {
-                this.txt4.Text = input.GetMsg();
+                this.txt1.Text = input.GetMsg();
             }
             else
             {
-                this.txt4.Text = msg.Trim();
+                this.txt1.Text = msg.Trim();
             }
         }
+        //帶出受評人員
+        private void txt1_TextChanged(object sender, EventArgs e)
+        {
+            string dataA = this.txt1.Text.Trim();
+            this.txt4.Text = Class1.GetValue("Name", "Employee", "EmpNo='" + dataA + "'");
+
+        }
+
     }
 }

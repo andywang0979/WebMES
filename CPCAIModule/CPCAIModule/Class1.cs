@@ -13,6 +13,8 @@ namespace CPCAIModule
     {
         public static string conn = string.Empty;
 
+        /// <summary>獲取資料表</summary>
+        /// <param name="sqlCommand">sql命令</param>  
         public static DataTable GetDataTable(string sqlCommand)
         {
             //string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
@@ -193,6 +195,10 @@ namespace CPCAIModule
             return Vid;
         }
 
+        /// <summary>獲取值</summary>
+        /// <param name="column">欄位</param>
+        /// <param name="table">資料表</param>
+        /// <param name="wherestr">查詢字串</param> 
         public static string GetValue(string column, string table, string wherestr)
         {
             string Vid = "";

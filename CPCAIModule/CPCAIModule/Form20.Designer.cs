@@ -90,6 +90,7 @@
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(148, 27);
             this.txt1.TabIndex = 1;
+            this.txt1.TextChanged += new System.EventHandler(this.txt1_TextChanged);
             // 
             // label_No
             // 
@@ -236,7 +237,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(612, 35);
+            this.button7.Location = new System.Drawing.Point(288, 35);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(22, 26);
@@ -315,7 +316,7 @@
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(136, 115);
+            this.comboBox1.Location = new System.Drawing.Point(460, 115);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(148, 28);
             this.comboBox1.TabIndex = 2285;
@@ -354,7 +355,7 @@
             // txt5
             // 
             this.txt5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt5.Location = new System.Drawing.Point(458, 116);
+            this.txt5.Location = new System.Drawing.Point(134, 118);
             this.txt5.Margin = new System.Windows.Forms.Padding(2);
             this.txt5.Name = "txt5";
             this.txt5.Size = new System.Drawing.Size(150, 27);
@@ -365,7 +366,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(362, 118);
+            this.label6.Location = new System.Drawing.Point(38, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 20);
             this.label6.TabIndex = 2279;
@@ -376,7 +377,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(54, 118);
+            this.label5.Location = new System.Drawing.Point(378, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 2277;
