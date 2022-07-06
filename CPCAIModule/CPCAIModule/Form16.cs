@@ -89,7 +89,7 @@ namespace CPCAIModule
             this.splitContainer2.SplitterDistance = splitContainer1.Height * 8 / 37;//功能鍵高，比例法，離上方往下182
             //下拉選項
             Class1.DropDownList_B("MProcess_No", "MProcess", comboBox1, "where MProcess_Name<>''");
-            if (comboBox1.SelectedIndex > -1)//當DB沒半比時不執行下拉選項
+            if (comboBox1.SelectedIndex > -1)//當DB沒半筆時不執行下拉選項
                 this.comboBox1.SelectedIndex = 0;
             button2_Click(sender, e);
         }

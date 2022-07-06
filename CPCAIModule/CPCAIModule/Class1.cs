@@ -195,8 +195,8 @@ namespace CPCAIModule
             return Vid;
         }
 
-        /// <summary>獲取值</summary>
-        /// <param name="column">欄位</param>
+        /// <summary>取得欄位資料</summary>
+        /// <param name="column">查詢的欄位</param>
         /// <param name="table">資料表</param>
         /// <param name="wherestr">查詢字串</param> 
         public static string GetValue(string column, string table, string wherestr)
@@ -320,6 +320,10 @@ namespace CPCAIModule
             return S;
         }
 
+        /// <summary>下拉選單</summary>
+        /// <param name="arr">陣列</param>  
+        /// <param name="type">類型</param>
+        /// /<param name="cboname">組合框名稱</param>  
         public static void cbo_choose(string [,] arr, string type, ComboBox cboname)
         {
             for (int i = 0; i <= arr.GetLength(0) - 1; i++)
@@ -343,7 +347,11 @@ namespace CPCAIModule
             cboname.ValueMember = column1;
             cboname.DisplayMember = column2;           
         }
-        //適用2個欄位
+        /// <summary>下拉選單(適用二個欄位)(從資料表取資料)</summary>
+        /// <param name="column1">欄位</param>  
+        /// <param name="table">資料表</param>
+        /// <param name="cboname">組合框名稱</param>
+        /// <param name="whereStr">查詢字串</param>  
         public static void DropDownList_A(string column1, string column2, string table, ComboBox cboname, string whereStr)
         {
             string SqlStr = "Select " + column1 + "=''," + column2 + "='' from " + table + " Union"
@@ -355,7 +363,12 @@ namespace CPCAIModule
             cboname.ValueMember = column1;
             cboname.DisplayMember = column2;
         }
-        //適用單一欄位
+
+        /// <summary>下拉選單(適用單一欄位)(從資料表取資料)</summary>
+        /// <param name="column1">欄位</param>  
+        /// <param name="table">資料表</param>
+        /// <param name="cboname">組合框名稱</param>
+        /// <param name="whereStr">查詢字串</param>  
         public static void DropDownList_B(string column1, string table, ComboBox cboname, string whereStr)
         {
             string SqlStr = "Select " + column1 + "='' from " + table + " Union"

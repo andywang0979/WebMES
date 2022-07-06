@@ -46,14 +46,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txt7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +69,8 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDetail2 = new System.Windows.Forms.DataGridView();
+            this.CB1 = new System.Windows.Forms.ComboBox();
+            this.txt3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,7 +86,7 @@
             // txt1
             // 
             this.txt1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt1.Location = new System.Drawing.Point(136, 34);
+            this.txt1.Location = new System.Drawing.Point(134, 34);
             this.txt1.Margin = new System.Windows.Forms.Padding(2);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(148, 27);
@@ -102,6 +103,7 @@
             this.label_No.Size = new System.Drawing.Size(75, 20);
             this.label_No.TabIndex = 2269;
             this.label_No.Text = "label_No";
+            this.label_No.Visible = false;
             // 
             // label1
             // 
@@ -161,6 +163,8 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.txt3);
+            this.splitContainer2.Panel1.Controls.Add(this.CB1);
             this.splitContainer2.Panel1.Controls.Add(this.txt9);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
             this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker3);
@@ -174,14 +178,13 @@
             this.splitContainer2.Panel1.Controls.Add(this.label14);
             this.splitContainer2.Panel1.Controls.Add(this.txt7);
             this.splitContainer2.Panel1.Controls.Add(this.label15);
-            this.splitContainer2.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer2.Panel1.Controls.Add(this.CB2);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             this.splitContainer2.Panel1.Controls.Add(this.txt6);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
             this.splitContainer2.Panel1.Controls.Add(this.txt5);
             this.splitContainer2.Panel1.Controls.Add(this.label6);
             this.splitContainer2.Panel1.Controls.Add(this.label5);
-            this.splitContainer2.Panel1.Controls.Add(this.txt3);
             this.splitContainer2.Panel1.Controls.Add(this.label4);
             this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.txt4);
@@ -237,7 +240,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(288, 35);
+            this.button7.Location = new System.Drawing.Point(286, 35);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(22, 26);
@@ -306,20 +309,20 @@
             this.label15.TabIndex = 2286;
             this.label15.Text = "修改者編號:";
             // 
-            // comboBox1
+            // CB2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CB2.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.CB2.FormattingEnabled = true;
+            this.CB2.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(460, 115);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 28);
-            this.comboBox1.TabIndex = 2285;
+            this.CB2.Location = new System.Drawing.Point(134, 155);
+            this.CB2.Name = "CB2";
+            this.CB2.Size = new System.Drawing.Size(148, 28);
+            this.CB2.TabIndex = 2285;
             // 
             // label8
             // 
@@ -335,7 +338,7 @@
             // txt6
             // 
             this.txt6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt6.Location = new System.Drawing.Point(136, 155);
+            this.txt6.Location = new System.Drawing.Point(460, 118);
             this.txt6.Margin = new System.Windows.Forms.Padding(2);
             this.txt6.Name = "txt6";
             this.txt6.Size = new System.Drawing.Size(148, 27);
@@ -346,7 +349,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(70, 161);
+            this.label7.Location = new System.Drawing.Point(394, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 20);
             this.label7.TabIndex = 2281;
@@ -358,7 +361,7 @@
             this.txt5.Location = new System.Drawing.Point(134, 118);
             this.txt5.Margin = new System.Windows.Forms.Padding(2);
             this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(150, 27);
+            this.txt5.Size = new System.Drawing.Size(148, 27);
             this.txt5.TabIndex = 2280;
             // 
             // label6
@@ -377,27 +380,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(378, 118);
+            this.label5.Location = new System.Drawing.Point(52, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 2277;
             this.label5.Text = "技能評比:";
-            // 
-            // txt3
-            // 
-            this.txt3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt3.Location = new System.Drawing.Point(458, 76);
-            this.txt3.Margin = new System.Windows.Forms.Padding(2);
-            this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(150, 27);
-            this.txt3.TabIndex = 2276;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(378, 79);
+            this.label4.Location = new System.Drawing.Point(54, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 2275;
@@ -406,7 +400,7 @@
             // txt2
             // 
             this.txt2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt2.Location = new System.Drawing.Point(136, 76);
+            this.txt2.Location = new System.Drawing.Point(460, 76);
             this.txt2.Margin = new System.Windows.Forms.Padding(2);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(148, 27);
@@ -417,7 +411,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(54, 79);
+            this.label3.Location = new System.Drawing.Point(378, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 2274;
@@ -560,6 +554,24 @@
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
             // 
+            // CB1
+            // 
+            this.CB1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.CB1.FormattingEnabled = true;
+            this.CB1.Location = new System.Drawing.Point(134, 79);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(148, 24);
+            this.CB1.TabIndex = 2359;
+            // 
+            // txt3
+            // 
+            this.txt3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt3.Location = new System.Drawing.Point(100, 278);
+            this.txt3.Margin = new System.Windows.Forms.Padding(2);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(148, 27);
+            this.txt3.TabIndex = 2360;
+            // 
             // Form20
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -598,7 +610,6 @@
         private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.Label label3;
@@ -618,7 +629,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvDetail2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CB2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label11;
@@ -633,5 +644,7 @@
         private System.Windows.Forms.TextBox txt8;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox txt9;
+        private System.Windows.Forms.ComboBox CB1;
+        private System.Windows.Forms.TextBox txt3;
     }
 }
