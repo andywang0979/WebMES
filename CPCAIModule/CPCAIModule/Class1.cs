@@ -17,8 +17,8 @@ namespace CPCAIModule
         /// <param name="sqlCommand">sql命令</param>  
         public static DataTable GetDataTable(string sqlCommand)
         {
-            //string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
-            string connectionString = @"Data Source=DB-3A120;Initial Catalog=CPCAIDB;User ID=sa;pwd=whale";
+            string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
+            //string connectionString = @"Data Source=DB-3A120;Initial Catalog=CPCAIDB;User ID=sa;pwd=whale";
 
             SqlConnection Connection = new SqlConnection(connectionString);            
             conn = Connection.DataSource.ToString();
@@ -99,8 +99,8 @@ namespace CPCAIModule
             //string connectionString = "Initial Catalog=ExamService;Data Source=10.5.1.250;" +
             //"User ID=tnerp;Password=15326;";
 
-            //string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
-            string connectionString = @"Data Source=DB-3A120;Initial Catalog=CPCAIDB;User ID=sa;pwd=whale";
+            string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
+            //string connectionString = @"Data Source=DB-3A120;Initial Catalog=CPCAIDB;User ID=sa;pwd=whale";
             SqlConnection objConn = new SqlConnection(connectionString);
             try { objConn.Open(); }
             catch { MessageBox.Show("『警告』連線失敗..."); return; }
@@ -376,7 +376,7 @@ namespace CPCAIModule
             + " " + whereStr
             + " group by " + column1 + " order by " + column1;
             DataTable combodt = GetDataTable(SqlStr);
-            cboname.DataSource = combodt;
+            cboname.DataSource = combodt;    //設定資料來源
             cboname.ValueMember = column1;
             cboname.DisplayMember = column1;
         }

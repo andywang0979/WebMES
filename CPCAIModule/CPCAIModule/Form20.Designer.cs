@@ -35,6 +35,7 @@
             this.txt4 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.CB1 = new System.Windows.Forms.ComboBox();
             this.txt9 = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.txt8 = new System.Windows.Forms.TextBox();
@@ -69,8 +70,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvDetail2 = new System.Windows.Forms.DataGridView();
-            this.CB1 = new System.Windows.Forms.ComboBox();
-            this.txt3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -120,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.Fuchsia;
             this.label2.Location = new System.Drawing.Point(378, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
@@ -163,7 +162,6 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.txt3);
             this.splitContainer2.Panel1.Controls.Add(this.CB1);
             this.splitContainer2.Panel1.Controls.Add(this.txt9);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
@@ -204,6 +202,16 @@
             this.splitContainer2.Size = new System.Drawing.Size(877, 440);
             this.splitContainer2.SplitterDistance = 319;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // CB1
+            // 
+            this.CB1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.CB1.FormattingEnabled = true;
+            this.CB1.Location = new System.Drawing.Point(134, 79);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(148, 24);
+            this.CB1.TabIndex = 2359;
+            this.CB1.SelectedIndexChanged += new System.EventHandler(this.CB1_SelectedIndexChanged);
             // 
             // txt9
             // 
@@ -554,24 +562,6 @@
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
             // 
-            // CB1
-            // 
-            this.CB1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.CB1.FormattingEnabled = true;
-            this.CB1.Location = new System.Drawing.Point(134, 79);
-            this.CB1.Name = "CB1";
-            this.CB1.Size = new System.Drawing.Size(148, 24);
-            this.CB1.TabIndex = 2359;
-            // 
-            // txt3
-            // 
-            this.txt3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt3.Location = new System.Drawing.Point(100, 278);
-            this.txt3.Margin = new System.Windows.Forms.Padding(2);
-            this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(148, 27);
-            this.txt3.TabIndex = 2360;
-            // 
             // Form20
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -645,6 +635,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox txt9;
         private System.Windows.Forms.ComboBox CB1;
-        private System.Windows.Forms.TextBox txt3;
     }
 }

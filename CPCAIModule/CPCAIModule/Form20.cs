@@ -110,20 +110,26 @@ namespace CPCAIModule
             this.splitContainer2.SplitterDistance = splitContainer1.Height * 8 / 37;
             //功能鍵高，比例法，離上方往下182
             //button2
-            //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", comboBox1, "where goods_MachineNo<>''");
-            // this.comboBox1.SelectedIndex = 0;
+            //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
+            
 
             string LoginAccount = Loginfm.id;
-            //登入者帳號指定給txt6欄位
+            //登入者帳號指定給評核員編號欄位
             this.txt5.Text = LoginAccount;
-            //帶出評核員
+           
+            //工站名稱(下拉選單)
+            Class1.DropDownList_B("Ws_Name", "Staff_Time_Data_Work", CB1, "where Ws_Code<>''");
+            this.CB1.SelectedIndex = 0;
+
+            //將評核員編號指定給dataB
             string dataB = this.txt5.Text.Trim();
+            //依評核員編號帶出評核員
             this.txt6.Text = Class1.GetValue("Name", "Employee", "EmpNo='" + dataB + "'");
             //反灰評核員欄位
             this.txt6.ReadOnly = true;
             //反灰受評人員欄位
             this.txt4.ReadOnly = true;
-            //反灰工站名稱欄位
+            //反灰工站編號欄位
             this.txt2.ReadOnly = true;
 
             button6_Click(sender, e);
@@ -140,18 +146,16 @@ namespace CPCAIModule
 
             //受評人員
             this.txt4.Text = dgvDetail2.Rows[e.RowIndex].Cells["受評人員"].Value.ToString().Trim();
+            //工站名稱
+            this.CB1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
             //工站編號
             this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
-            //工站名稱
-            //this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
-
-            Class1.DropDownList_B("Ws_Name", "Staff_Time_Data_Work", CB1, "where Ws_Code<>''");
-
-            //技能評比 //下拉選單
-            //this.txt8.Text = dgvDetail2.Rows[e.RowIndex].Cells["技能評比"].Value.ToString().Trim();
+            
+            //技能評比 //下拉選單           
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["技能評比"].Value.ToString().Trim();
-            string[,] arr_kind = { { "0", "" }, { "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" } };
+            string[,] arr_kind = {{ "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" } };
             Class1.cbo_choose(arr_kind, kind, CB2);
+
             //評核員編號
             this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["評核員編號"].Value.ToString().Trim();
             //評核員
@@ -165,9 +169,6 @@ namespace CPCAIModule
             //修改者編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
             //修改者時間
-            //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
-            //this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm");
-
             this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
             if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value == DBNull.Value)
                 this.txt8.Text = "";
@@ -190,7 +191,7 @@ namespace CPCAIModule
             this.txt1.Text = ""; 
             this.txt4.Text = ""; 
             this.txt2.Text = "";
-            this.txt3.Text = "";           
+            this.CB1.SelectedIndex = 0;
             this.CB2.SelectedIndex = 0;
             this.txt5.Text = "";
             this.txt6.Text = "";
@@ -221,7 +222,7 @@ namespace CPCAIModule
                 MessageBox.Show("請先輸入『工站編號』資料...");
                 return false;
             }
-            if (txt3.Text.Trim() == "")
+            if (CB1.Text.Trim() == "")
             {
                 MessageBox.Show("請先輸入『工站名稱』資料...");
                 return false;
@@ -241,11 +242,26 @@ namespace CPCAIModule
                 MessageBox.Show("請先輸入『評核員』資料...");
                 return false;
             }
-            //if (txt7.Text.Trim() == "")
-            //{
-            //    MessageBox.Show("請先輸入『評核日期』資料...");
-            //    return false;
-            //}
+            if (txt7.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『評核日期』資料...");
+                return false;
+            }
+            if (txt10.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『建檔者編號』資料...");
+                return false;
+            }
+            if (txt7.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『修改者編號』資料...");
+                return false;
+            }
+            if (txt9.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『建檔者時間』資料...");
+                return false;
+            }
             return isOK;
         }
         //新增
@@ -266,10 +282,10 @@ namespace CPCAIModule
                 + "'" + txt1.Text.Trim() + "',"
                 + "'" + txt4.Text.Trim() + "',"
                 + "'" + txt2.Text.Trim() + "',"
-                + "'" + txt3.Text.Trim() + "',"                
+                + "'" + CB1.SelectedItem.ToString().Trim() + "'," //工站名稱
                 + "'" + CB2.SelectedItem.ToString().Trim() + "'," //技能評比
-                + "'" + txt5.Text.Trim() + "',"
-                + "'" + txt6.Text.Trim() + "',"
+                + "'" + txt5.Text.Trim() + "'," //評核員編號
+                + "'" + txt6.Text.Trim() + "'," //評核員
                 + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
                 + "'" + txt10.Text.Trim() + "',"              
                 + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
@@ -286,10 +302,10 @@ namespace CPCAIModule
         {
             if (txt1.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入欲刪除之『員工代號』...");
+                MessageBox.Show("請先輸入欲刪除之『員工編號』...");
                 return;
             }
-            if (MessageBox.Show(this, "確定要刪除『員工代號』為:" + this.txt1.Text.Trim() + "的資料嗎?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(this, "確定要刪除『員工編號』為:" + this.txt1.Text.Trim() + "的資料嗎?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 SqlStr = "Delete from Per_Fun_Data "
                     + "where Emp_Code='" + this.txt1.Text.Trim() + "'";
@@ -308,11 +324,14 @@ namespace CPCAIModule
             + "Emp_Code = '" + txt1.Text.Trim() + "',"
             + "Raters = '" + txt4.Text.Trim() + "',"
             + "Ws_Code = '" + txt2.Text.Trim() + "',"
-            + "Ws_Name = '" + txt3.Text.Trim() + "',"
-                //+ "Skill_Eva = '" + txt8.Text.Trim() + "',"
+            + "Ws_Name = '" + CB1.SelectedItem.ToString().Trim() + "',"
+            // + "Ws_Name = '" + txt3.Text.Trim() + "',"
+            + "Skill_Eva = '" + CB2.SelectedItem.ToString().Trim() + "',"
+            + "Ass_Date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "',"
             + "Ass_Code = '" + txt5.Text.Trim() + "',"
             + "Assessor = '" + txt6.Text.Trim() + "',"
-            + "Ass_Date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "'"
+            + "UNo = '" + txt7.Text.Trim() + "',"
+            + "UDate = '" + DateTime.Now.ToString("yyyy-MM-dd-ss") + "',"
             + "where Emp_Code = '" + this.label_No.Text + "'";
 
             Class1.Execute_SQL(SqlStr);
@@ -346,6 +365,11 @@ namespace CPCAIModule
         {
             string dataA = this.txt1.Text.Trim();
             this.txt4.Text = Class1.GetValue("Name", "Employee", "EmpNo='" + dataA + "'");
+        }
+        //工站名稱欄位下拉式選單帶出工站編號
+        private void CB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.txt2.Text = Class1.GetValue("Ws_Code", "Staff_Time_Data_Work", "Ws_Name='" + CB1.SelectedValue.ToString() + "'");
         }
 
     }

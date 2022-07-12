@@ -170,7 +170,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 20;
-            this.label3.Text = "建檔者代號:";
+            this.label3.Text = "建檔者編號:";
             // 
             // label11
             // 
@@ -227,7 +227,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 13;
-            this.label9.Text = "員工代號:";
+            this.label9.Text = "員工編號:";
             // 
             // txt6
             // 
@@ -265,7 +265,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 20);
             this.label6.TabIndex = 9;
-            this.label6.Text = "修改者代號:";
+            this.label6.Text = "修改者編號:";
             // 
             // label_No
             // 
@@ -281,7 +281,7 @@
             // txt4
             // 
             this.txt4.Font = new System.Drawing.Font("新細明體", 12F);
-            this.txt4.Location = new System.Drawing.Point(496, 28);
+            this.txt4.Location = new System.Drawing.Point(194, 31);
             this.txt4.Name = "txt4";
             this.txt4.Size = new System.Drawing.Size(148, 27);
             this.txt4.TabIndex = 8;
@@ -291,18 +291,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label1.Location = new System.Drawing.Point(109, 28);
+            this.label1.Location = new System.Drawing.Point(413, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "工站代號:";
+            this.label1.Text = "工站編號:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(413, 33);
+            this.label5.Location = new System.Drawing.Point(111, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 7;
@@ -311,7 +311,7 @@
             // txt1
             // 
             this.txt1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.txt1.Location = new System.Drawing.Point(194, 28);
+            this.txt1.Location = new System.Drawing.Point(496, 32);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(148, 27);
             this.txt1.TabIndex = 1;
@@ -418,7 +418,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 2232;
-            this.label7.Text = "工站代號:";
+            this.label7.Text = "工站編號:";
             // 
             // dgvDetail2
             // 

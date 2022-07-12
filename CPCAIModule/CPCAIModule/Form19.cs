@@ -105,6 +105,10 @@ namespace CPCAIModule
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
             //Class1.DropDownList_C("", "", "", "", CB1, "");
             //this.CB1.SelectedIndex = 0;
+            //反灰工站編號欄位
+            this.txt1.ReadOnly = true;
+            //反灰工站編號欄位
+            this.txt1.ReadOnly = true;
             button6_Click(sender,e);
         }
 
@@ -123,8 +127,6 @@ namespace CPCAIModule
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
 
             string[,] arr_kind = {{"1","新手"},{"2","熟手"},{"3","超熟手"}};
-
-
 
             //建檔時間.
             //this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔時間"].Value.ToString().Trim();

@@ -98,7 +98,8 @@ namespace CPCAIModule
             //下拉選項            
             Class1.DropDownList_A("goods_No", "goods_Name", "goods_Basic", CB1, "where goods_Name<>''");
             Class1.DropDownList_B("goods_No", "goods_Basic", comboBox1, "where goods_Name<>''");
-            this.comboBox1.SelectedIndex = 0; this.CB1.SelectedIndex = 0;
+            this.comboBox1.SelectedIndex = 0; 
+            this.CB1.SelectedIndex = 0;
             button2_Click(sender, e);//查詢
             button7_Click(sender, e);//清除            
         }

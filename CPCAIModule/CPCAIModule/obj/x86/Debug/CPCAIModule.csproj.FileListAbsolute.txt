@@ -411,7 +411,6 @@ D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.exe
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.pdb
 D:\Git\CPCAIModule\CPCAIModule\bin\debug\CPCAIModule.exe
 D:\Git\CPCAIModule\CPCAIModule\bin\debug\CPCAIModule.pdb
-D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.csprojResolveAssemblyReference.cache
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.FmBase1.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.FmMenu.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Form1.resources
