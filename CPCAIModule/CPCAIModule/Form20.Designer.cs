@@ -148,7 +148,13 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label10);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dgvDetail2);
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
+            this.splitContainer1.Panel2.Controls.Add(this.button5);
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Size = new System.Drawing.Size(877, 828);
             this.splitContainer1.SplitterDistance = 416;
             this.splitContainer1.TabIndex = 2273;
@@ -192,12 +198,6 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Info;
-            this.splitContainer2.Panel2.Controls.Add(this.button1);
-            this.splitContainer2.Panel2.Controls.Add(this.label10);
-            this.splitContainer2.Panel2.Controls.Add(this.button5);
-            this.splitContainer2.Panel2.Controls.Add(this.button4);
-            this.splitContainer2.Panel2.Controls.Add(this.button3);
-            this.splitContainer2.Panel2.Controls.Add(this.button2);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
             this.splitContainer2.Size = new System.Drawing.Size(877, 416);
             this.splitContainer2.SplitterDistance = 276;
@@ -428,7 +428,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button1.Location = new System.Drawing.Point(358, 44);
+            this.button1.Location = new System.Drawing.Point(279, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 32);
             this.button1.TabIndex = 2234;
@@ -441,7 +441,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("標楷體", 14.25F);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(731, 57);
+            this.label10.Location = new System.Drawing.Point(645, 46);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 19);
             this.label10.TabIndex = 12;
@@ -450,7 +450,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button5.Location = new System.Drawing.Point(651, 44);
+            this.button5.Location = new System.Drawing.Point(572, 33);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(58, 32);
             this.button5.TabIndex = 11;
@@ -461,7 +461,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button4.Location = new System.Drawing.Point(578, 44);
+            this.button4.Location = new System.Drawing.Point(499, 33);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 32);
             this.button4.TabIndex = 10;
@@ -472,7 +472,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button3.Location = new System.Drawing.Point(504, 44);
+            this.button3.Location = new System.Drawing.Point(425, 33);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(58, 32);
             this.button3.TabIndex = 9;
@@ -483,7 +483,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button2.Location = new System.Drawing.Point(431, 44);
+            this.button2.Location = new System.Drawing.Point(352, 33);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(58, 32);
             this.button2.TabIndex = 8;
@@ -574,12 +574,12 @@
             this.Load += new System.EventHandler(this.Form20_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
