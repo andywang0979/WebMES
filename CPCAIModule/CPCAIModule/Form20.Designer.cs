@@ -109,11 +109,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label1.Location = new System.Drawing.Point(54, 37);
+            this.label1.Location = new System.Drawing.Point(21, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 2270;
-            this.label1.Text = "員工編號:";
+            this.label1.Text = "受評員工編號:";
             // 
             // label2
             // 
@@ -124,7 +124,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 2271;
-            this.label2.Text = "受評人員:";
+            this.label2.Text = "受評員工:";
             // 
             // txt4
             // 
@@ -149,8 +149,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvDetail2);
-            this.splitContainer1.Size = new System.Drawing.Size(877, 618);
-            this.splitContainer1.SplitterDistance = 440;
+            this.splitContainer1.Size = new System.Drawing.Size(877, 828);
+            this.splitContainer1.SplitterDistance = 416;
             this.splitContainer1.TabIndex = 2273;
             // 
             // splitContainer2
@@ -199,8 +199,8 @@
             this.splitContainer2.Panel2.Controls.Add(this.button3);
             this.splitContainer2.Panel2.Controls.Add(this.button2);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
-            this.splitContainer2.Size = new System.Drawing.Size(877, 440);
-            this.splitContainer2.SplitterDistance = 319;
+            this.splitContainer2.Size = new System.Drawing.Size(877, 416);
+            this.splitContainer2.SplitterDistance = 276;
             this.splitContainer2.TabIndex = 0;
             // 
             // CB1
@@ -554,11 +554,10 @@
             // dgvDetail2
             // 
             this.dgvDetail2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetail2.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetail2.Location = new System.Drawing.Point(12, 80);
             this.dgvDetail2.Name = "dgvDetail2";
             this.dgvDetail2.RowTemplate.Height = 24;
-            this.dgvDetail2.Size = new System.Drawing.Size(877, 174);
+            this.dgvDetail2.Size = new System.Drawing.Size(853, 152);
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
             // 
@@ -566,7 +565,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 618);
+            this.ClientSize = new System.Drawing.Size(877, 828);
             this.Controls.Add(this.label_No);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form20";

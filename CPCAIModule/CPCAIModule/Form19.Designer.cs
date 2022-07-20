@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form19));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.CB1 = new System.Windows.Forms.ComboBox();
             this.txt11 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt10 = new System.Windows.Forms.TextBox();
@@ -85,6 +87,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
+            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.dgvDetail2);
             this.splitContainer1.Size = new System.Drawing.Size(877, 618);
             this.splitContainer1.SplitterDistance = 350;
@@ -99,6 +103,9 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
+            this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer2.Panel1.Controls.Add(this.CB1);
             this.splitContainer2.Panel1.Controls.Add(this.txt11);
             this.splitContainer2.Panel1.Controls.Add(this.label12);
             this.splitContainer2.Panel1.Controls.Add(this.txt10);
@@ -130,8 +137,17 @@
             this.splitContainer2.Panel2.Controls.Add(this.button1);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
             this.splitContainer2.Size = new System.Drawing.Size(877, 350);
-            this.splitContainer2.SplitterDistance = 219;
+            this.splitContainer2.SplitterDistance = 237;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // CB1
+            // 
+            this.CB1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.CB1.FormattingEnabled = true;
+            this.CB1.Location = new System.Drawing.Point(194, 102);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(148, 24);
+            this.CB1.TabIndex = 24;
             // 
             // txt11
             // 
@@ -186,7 +202,7 @@
             // txt9
             // 
             this.txt9.Font = new System.Drawing.Font("新細明體", 12F);
-            this.txt9.Location = new System.Drawing.Point(194, 100);
+            this.txt9.Location = new System.Drawing.Point(342, 208);
             this.txt9.Name = "txt9";
             this.txt9.Size = new System.Drawing.Size(148, 27);
             this.txt9.TabIndex = 17;
@@ -423,11 +439,10 @@
             // dgvDetail2
             // 
             this.dgvDetail2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetail2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetail2.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetail2.Location = new System.Drawing.Point(20, 23);
             this.dgvDetail2.Name = "dgvDetail2";
             this.dgvDetail2.RowTemplate.Height = 24;
-            this.dgvDetail2.Size = new System.Drawing.Size(877, 264);
+            this.dgvDetail2.Size = new System.Drawing.Size(829, 219);
             this.dgvDetail2.TabIndex = 0;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
             // 
@@ -435,6 +450,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(877, 618);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form19";
@@ -492,5 +509,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt10;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox CB1;
     }
 }

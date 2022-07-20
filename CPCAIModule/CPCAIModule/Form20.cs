@@ -20,7 +20,7 @@ namespace CPCAIModule
         {
             InitializeComponent();
         }
-        
+
         /// <summary>定義每個欄位寬度</summary>
         /// <param name="column_num">欄位數</param>
         /// <param name="column_width">欄位寬度</param> 
@@ -58,7 +58,8 @@ namespace CPCAIModule
                 + "A.SNo as '建檔者編號',"
                 + "convert(varchar, A.SDate, 120) as '建檔者時間',"
                 + "A.UNo as '修改者編號',"
-                + "substring(convert(varchar,A.UDate,121),1,16) as '修改者時間'"
+                //+ "substring(convert(varchar,A.UDate,121),1,16) as '修改者時間'"
+                + "convert(varchar, A.UDate, 120) as '修改者時間'"
                 + "from Per_Fun_Data A"
                 + " where 1=1";
 
@@ -111,12 +112,12 @@ namespace CPCAIModule
             //功能鍵高，比例法，離上方往下182
             //button2
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
-            
+
 
             string LoginAccount = Loginfm.id;
             //登入者帳號指定給評核員編號欄位
             this.txt5.Text = LoginAccount;
-           
+
             //工站名稱(下拉選單)
             Class1.DropDownList_B("Ws_Name", "Staff_Time_Data_Work", CB1, "where Ws_Code<>''");
             this.CB1.SelectedIndex = 0;
@@ -150,10 +151,10 @@ namespace CPCAIModule
             this.CB1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
             //工站編號
             this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
-            
+
             //技能評比 //下拉選單           
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["技能評比"].Value.ToString().Trim();
-            string[,] arr_kind = {{ "1", "1" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" } };
+            string[,] arr_kind = { { "1", "1:完全不會" }, { "2", "2" }, { "3", "3" }, { "4", "4" }, { "5", "5" } };
             Class1.cbo_choose(arr_kind, kind, CB2);
 
             //評核員編號
@@ -169,11 +170,14 @@ namespace CPCAIModule
             //修改者編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
             //修改者時間
-            this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+            //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
             if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value == DBNull.Value)
-                this.txt8.Text = "";
+                this.dateTimePicker3.Text = "";
             else
+                this.dateTimePicker3.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("yyyy-MM-dd");
                 this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm:ss");
+            //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+            //this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm:ss");
         }
 
         //查詢
@@ -188,19 +192,19 @@ namespace CPCAIModule
         //清除
         private void button5_Click(object sender, EventArgs e)
         {
-            this.txt1.Text = ""; 
-            this.txt4.Text = ""; 
+            this.txt1.Text = "";
+            this.txt4.Text = "";
             this.txt2.Text = "";
             this.CB1.SelectedIndex = 0;
             this.CB2.SelectedIndex = 0;
             this.txt5.Text = "";
             this.txt6.Text = "";
             this.dateTimePicker1.Value = DateTime.Now;
-            this.txt10.Text = ""; 
+            this.txt10.Text = "";
             this.txt7.Text = "";
             this.txt9.Text = "";
             this.dateTimePicker3.Value = DateTime.Now;
-            
+
             this.label_No.Text = "";
         }
         //檢查空欄位
@@ -226,12 +230,7 @@ namespace CPCAIModule
             {
                 MessageBox.Show("請先輸入『工站名稱』資料...");
                 return false;
-            }
-            if (CB2.Text.Trim() == "")
-            {
-                MessageBox.Show("請先輸入『技能評比』資料...");
-                return false;
-            }
+            }           
             if (txt5.Text.Trim() == "")
             {
                 MessageBox.Show("請先輸入『評核員編號』資料...");
@@ -242,7 +241,12 @@ namespace CPCAIModule
                 MessageBox.Show("請先輸入『評核員』資料...");
                 return false;
             }
-            if (txt7.Text.Trim() == "")
+            if (CB2.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『技能評比』資料...");
+                return false;
+            }
+            if (this.dateTimePicker1.Value.ToString() == "")
             {
                 MessageBox.Show("請先輸入『評核日期』資料...");
                 return false;
@@ -251,17 +255,23 @@ namespace CPCAIModule
             {
                 MessageBox.Show("請先輸入『建檔者編號』資料...");
                 return false;
+            }          
+            if (txt9.Text.Trim() == "")
+            {
+                MessageBox.Show("請先輸入『建檔者時間』資料...");
+                return false;
             }
             if (txt7.Text.Trim() == "")
             {
                 MessageBox.Show("請先輸入『修改者編號』資料...");
                 return false;
             }
-            if (txt9.Text.Trim() == "")
+            if (this.dateTimePicker3.Value.ToString() == "")
             {
-                MessageBox.Show("請先輸入『建檔者時間』資料...");
+                MessageBox.Show("請先輸入『修改者日期』資料...");
                 return false;
             }
+
             return isOK;
         }
         //新增
@@ -275,23 +285,27 @@ namespace CPCAIModule
                 MessageBox.Show("請注意『員工代號：" + txt1.Text.Trim() + "』資料，已存在...");
                 return;
             }
-            //Insert
+            //Insert 
             SqlStr = "Insert into Per_Fun_Data"
                 + "(Emp_Code, Raters, Ws_Code, Ws_Name, Skill_Eva, Ass_Code, Assessor, Ass_Date,SNo,SDate,UNo,UDate)"
                 + "values("
-                + "'" + txt1.Text.Trim() + "',"
-                + "'" + txt4.Text.Trim() + "',"
-                + "'" + txt2.Text.Trim() + "',"
-                + "'" + CB1.SelectedItem.ToString().Trim() + "'," //工站名稱
+                + "'" + txt1.Text.Trim() + "'," //員工編號
+                + "'" + txt4.Text.Trim() + "'," //受評人員
+                + "'" + txt2.Text.Trim() + "'," //工站編號
+                + "'" + CB1.SelectedValue.ToString().Trim() + "'," //工站名稱
                 + "'" + CB2.SelectedItem.ToString().Trim() + "'," //技能評比
                 + "'" + txt5.Text.Trim() + "'," //評核員編號
-                + "'" + txt6.Text.Trim() + "'," //評核員
-                + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
-                + "'" + txt10.Text.Trim() + "',"              
-                + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
+                + "'" + txt6.Text.Trim() + "'," //評核員              
+                + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "'," //評核日期
+                + "'" + txt10.Text.Trim() + "',"
+                //+ "'" + txt9.Text.ToString("yyyy-MM-dd HH:mm:ss") + "',"
+                + "'" + Convert.ToDateTime(this.txt9.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"
                 + "'" + txt7.Text.Trim() + "',"
-                 + "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "'"
-                + ")";
+                //+ "'" + Convert.ToDateTime(this.dateTimePicker1.Text).ToString("yyyy-MM-dd HH:mm:ss") + "',"               
+                // + "'" + Convert.ToDateTime(this.dateTimePicker3.Text).ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                //+ ")"
+                 + "'" + Convert.ToDateTime(this.dateTimePicker3.Text).ToString("yyyy-MM-dd") + "  " + Convert.ToDateTime(this.txt8.Text).ToString("HH:mm:ss") + "'"
+                 + ")";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("新增資料完成...");
             button5_Click(sender, e);//清除
@@ -324,14 +338,18 @@ namespace CPCAIModule
             + "Emp_Code = '" + txt1.Text.Trim() + "',"
             + "Raters = '" + txt4.Text.Trim() + "',"
             + "Ws_Code = '" + txt2.Text.Trim() + "',"
-            + "Ws_Name = '" + CB1.SelectedItem.ToString().Trim() + "',"
+            + "Ws_Name = '" + CB1.SelectedValue.ToString().Trim() + "',"
             // + "Ws_Name = '" + txt3.Text.Trim() + "',"
-            + "Skill_Eva = '" + CB2.SelectedItem.ToString().Trim() + "',"
-            + "Ass_Date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "',"
+            + "Skill_Eva = '" + CB2.SelectedItem.ToString().Trim() + "',"            
             + "Ass_Code = '" + txt5.Text.Trim() + "',"
             + "Assessor = '" + txt6.Text.Trim() + "',"
+            //+ "Ass_Date = '" + DateTime.Now.ToString("yyyy-MM-dd") + "',"
+            + "Ass_Date = '" + Convert.ToDateTime(dateTimePicker1.Value).ToString("yyyy-MM-dd HH:mm:ss") + "',"
+            + "SNo = '" + txt10.Text.Trim() + "',"
+            + "SDate = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
             + "UNo = '" + txt7.Text.Trim() + "',"
-            + "UDate = '" + DateTime.Now.ToString("yyyy-MM-dd-ss") + "',"
+            //+ "UDate = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+            + "UDate = '" + Convert.ToDateTime(dateTimePicker3.Value).ToString("yyyy-MM-dd") +" "+txt8.Text.Trim()+ "'"
             + "where Emp_Code = '" + this.label_No.Text + "'";
 
             Class1.Execute_SQL(SqlStr);
@@ -369,7 +387,11 @@ namespace CPCAIModule
         //工站名稱欄位下拉式選單帶出工站編號
         private void CB1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //this.txt2.Text = Class1.GetValue("Ws_Code", "Staff_Time_Data_Work", "Ws_Name='" + CB1.SelectedValue.ToString() + "'");
+
+            //if (CB1.SelectedValue.ToString() == "System.Data.DataRowView") return;
             this.txt2.Text = Class1.GetValue("Ws_Code", "Staff_Time_Data_Work", "Ws_Name='" + CB1.SelectedValue.ToString() + "'");
+
         }
 
     }

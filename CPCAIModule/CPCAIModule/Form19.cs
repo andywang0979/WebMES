@@ -128,6 +128,8 @@ namespace CPCAIModule
 
             string[,] arr_kind = {{"1","新手"},{"2","熟手"},{"3","超熟手"}};
 
+            Class1.cbo_choose(arr_kind, kind, CB1);
+
             //建檔時間.
             //this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔時間"].Value.ToString().Trim();
             //職能等級

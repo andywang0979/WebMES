@@ -157,7 +157,10 @@ namespace CPCAIModule
             if (comboBox1.SelectedIndex>-1)//當DB沒半比時不執行下拉選項
                 this.comboBox1.SelectedIndex = 0; 
             this.textBox1.Text = "";
-            this.CB1.SelectedIndex = 0; this.CB2.SelectedIndex = 0; this.CB3.SelectedIndex = 0; this.CB4.SelectedIndex = 0;
+            this.CB1.SelectedIndex = 0;
+            this.CB2.SelectedIndex = 0; 
+            this.CB3.SelectedIndex = 0; 
+            this.CB4.SelectedIndex = 0;
             this.label_No.Text = "";
         }
         //檢查空欄位
