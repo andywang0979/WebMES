@@ -72,8 +72,8 @@ namespace CPCAIModule
             DataTable dt = Class1.GetDataTable(SqlStr);
             dgvDetail2.DataSource = dt;
 
-            int column_num = 7;//總共0-7共8個欄位
-            int[] column_width = { 120, 250, 80, 250, 80, 100, 80, 80 };//欄寬值
+            int column_num = 12;//總共0-11共12個欄位
+            int[] column_width = { 120, 150, 80, 150, 80, 100, 80, 100,100,120,100,120 };//欄寬值
 
             Columns_for(column_num, column_width);
 
@@ -87,13 +87,13 @@ namespace CPCAIModule
                 MessageBox.Show("查無相關資料...");
             }
         }
-        //快查
+        //速查
         private void button6_Click(object sender, EventArgs e)
         {
             string where_A = "";
-            if (this.textBox8.Text.Trim() != "")
+            if (this.comboBox1.SelectedIndex > 0)
             {
-                where_A = "and A.Emp_Code like'%" + textBox8.Text.Trim() + "%'";
+                where_A = "and A.Emp_Code ='" + this.comboBox1.SelectedValue.ToString().Trim() + "'";
             }
             if (this.textBox1.Text.Trim() != "")
             {
@@ -123,6 +123,10 @@ namespace CPCAIModule
             Class1.DropDownList_B("Ws_Name", "Staff_Time_Data_Work", CB1, "where Ws_Code<>''");
             this.CB1.SelectedIndex = 0;
 
+            //員工編號(下拉選單)
+            Class1.DropDownList_B("Name", "Employee", comboBox1, "where EmpNo<>''");
+            this.comboBox1.SelectedIndex = 0;
+
             //將評核員編號指定給dataB
             string dataB = this.txt5.Text.Trim();
             //依評核員編號帶出評核員
@@ -133,6 +137,10 @@ namespace CPCAIModule
             this.txt4.ReadOnly = true;
             //反灰工站編號欄位
             this.txt2.ReadOnly = true;
+            //反灰建檔者編號
+            this.txt10.ReadOnly = true;
+            //反灰建檔者時間
+            this.txt9.ReadOnly = true;
 
             button6_Click(sender, e);
         }
@@ -349,7 +357,6 @@ namespace CPCAIModule
             + "SNo = '" + txt10.Text.Trim() + "',"
             + "SDate = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
             + "UNo = '" + txt7.Text.Trim() + "',"
-            //+ "UDate = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
             + "UDate = '" + Convert.ToDateTime(dateTimePicker3.Value).ToString("yyyy-MM-dd") +" "+txt8.Text.Trim()+ "'"
             + "where Emp_Code = '" + this.label_No.Text + "'";
 
@@ -392,6 +399,11 @@ namespace CPCAIModule
 
             //if (CB1.SelectedValue.ToString() == "System.Data.DataRowView") return;
             this.txt2.Text = Class1.GetValue("Ws_Code", "Staff_Time_Data_Work", "Ws_Name='" + CB1.SelectedValue.ToString() + "'");
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
