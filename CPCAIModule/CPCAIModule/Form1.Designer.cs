@@ -154,7 +154,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.button4);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
             this.splitContainer2.Size = new System.Drawing.Size(1163, 357);
-            this.splitContainer2.SplitterDistance = 259;
+            this.splitContainer2.SplitterDistance = 260;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -659,6 +659,7 @@
             this.dgvDetail2.Size = new System.Drawing.Size(1163, 195);
             this.dgvDetail2.TabIndex = 91;
             this.dgvDetail2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellClick);
+            this.dgvDetail2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail2_CellContentClick);
             // 
             // Form1
             // 

@@ -320,5 +320,10 @@ namespace CPCAIModule
         {
             this.txt2.Text = "---";
         }
+
+        private void dgvDetail2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

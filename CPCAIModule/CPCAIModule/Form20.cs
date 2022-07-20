@@ -107,8 +107,9 @@ namespace CPCAIModule
             //第1刀位置
             this.splitContainer1.SplitterDistance = splitContainer1.Height * 10 / 25;
             //上方高，比例法，離上方往下266
+
             //第2刀位置
-            this.splitContainer2.SplitterDistance = splitContainer1.Height * 8 / 37;
+            //this.splitContainer2.SplitterDistance = splitContainer1.Height * 8 / 37;
             //功能鍵高，比例法，離上方往下182
             //button2
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
