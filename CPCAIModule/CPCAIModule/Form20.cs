@@ -56,10 +56,10 @@ namespace CPCAIModule
                 + "A.Assessor as '評核員',"
                 + "convert(varchar,A.Ass_Date,111) as '評核日期',"
                 + "A.SNo as '建檔者編號',"
-                + "convert(varchar, A.SDate, 120) as '建檔者時間',"
+                + "convert(varchar, A.SDate, 120) as '建檔時間',"
                 + "A.UNo as '修改者編號',"
                 //+ "substring(convert(varchar,A.UDate,121),1,16) as '修改者時間'"
-                + "convert(varchar, A.UDate, 120) as '修改者時間'"
+                + "convert(varchar, A.UDate, 120) as '修改時間'"
                 + "from Per_Fun_Data A"
                 + " where 1=1";
 
@@ -175,16 +175,16 @@ namespace CPCAIModule
             //建檔者編號
             this.txt10.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者編號"].Value.ToString().Trim();
             //建檔者時間
-            this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者時間"].Value.ToString().Trim();
+            this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔時間"].Value.ToString().Trim();
             //修改者編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
             //修改者時間
             //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
-            if (dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value == DBNull.Value)
+            if (dgvDetail2.Rows[e.RowIndex].Cells["修改時間"].Value == DBNull.Value)
                 this.dateTimePicker3.Text = "";
             else
-                this.dateTimePicker3.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("yyyy-MM-dd");
-                this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm:ss");
+                this.dateTimePicker3.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改時間"].Value).ToString("yyyy-MM-dd");
+                this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改時間"].Value).ToString("HH:mm:ss");
             //this.dateTimePicker3.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
             //this.txt8.Text = Convert.ToDateTime(dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value).ToString("HH:mm:ss");
         }
@@ -267,7 +267,7 @@ namespace CPCAIModule
             }          
             if (txt9.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『建檔者時間』資料...");
+                MessageBox.Show("請先輸入『建檔時間』資料...");
                 return false;
             }
             if (txt7.Text.Trim() == "")
@@ -277,7 +277,7 @@ namespace CPCAIModule
             }
             if (this.dateTimePicker3.Value.ToString() == "")
             {
-                MessageBox.Show("請先輸入『修改者日期』資料...");
+                MessageBox.Show("請先輸入『修改時間』資料...");
                 return false;
             }
 

@@ -33,6 +33,8 @@ namespace CPCAIModule
             return table;
         }
 
+
+
         public static DataTable GetDataTableA(string sqlCommand)
         {
             //string connectionString = Loginfm.connstring;
@@ -99,6 +101,7 @@ namespace CPCAIModule
             //string connectionString = "Initial Catalog=ExamService;Data Source=10.5.1.250;" +
             //"User ID=tnerp;Password=15326;";
 
+
             string connectionString = @"Data Source=.;Initial Catalog=CPCAIDB;User ID=sa;pwd=abc";
             //string connectionString = @"Data Source=DB-3A120;Initial Catalog=CPCAIDB;User ID=sa;pwd=whale";
             SqlConnection objConn = new SqlConnection(connectionString);
@@ -107,6 +110,22 @@ namespace CPCAIModule
             SqlCommand objCmd = new SqlCommand(strSQL, objConn);
             objCmd.ExecuteNonQuery();
             objConn.Close();
+
+            /*
+             1.實體化連接物件
+             2.實體化操作物件
+             3.判斷sql語句是否帶有參數
+             4.實體化查詢物件
+             5.填充數據
+             6.關閉連接
+             */
+
+            //using (SqlConnection SqlCon =new SqlConnection(strCon)) /*打開連結*/
+            //{
+            //    //實體化連接物件
+            //    using(SqlCommand sqlCom = new SqlCommand())  /* 1.sql語句 */
+            //}
+
         }
 
         public static void Execute_SQL_OLEDB(string strSQL)

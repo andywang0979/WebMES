@@ -43,17 +43,18 @@ namespace CPCAIModule
         /// <param name="where_str">查詢字串</param>      
         private void Form_Query(string where_str)
         {
-            SqlStr = "Select A.Ws_Code as '工站代號',"
+            SqlStr = "Select A.Ws_Code as '工站編號',"
                 + "A.Ws_Name as '工站名稱',"
-                //+ "A.Filer_Id as '建檔者代號',"
-                //+ "A.Filer_Name as '建檔者名稱',"
-                + "A.Fun_Need_Level '職能需求等級',"
-            
-                + "Emp_Code as '員工代號',"
-                + "Fun_Qua_Emp_Name '職能資格員工姓名',"
-                + "Fun_Level '職能等級',"
-                + "A.SNo as '維護者代號',"
-                + "convert(varchar,A.SDate,120) as '維護者時間'"
+                + "A.Emp_Code as '員工編號',"
+                + "A.Fun_Need_Level '職能需求等級',"                           
+                + "A.Fun_Qua_Emp_Name '職能資格員工姓名',"
+                + "A.Fun_Level '職能等級',"
+                + "A.Line as '項次',"
+                + "A.Department as '部門',"
+                + "A.SNo as '建檔者編號',"
+                + "convert(varchar,A.SDate,120) as '建檔時間',"
+                + "A.UNo as '修改者編號',"
+                + "convert(varchar,A.SDate,120) as '修改時間'"
                 + " from Ws_Fun_Req A"
                 +" where 1=1";
 
@@ -65,8 +66,8 @@ namespace CPCAIModule
             System.Data.DataTable dt = Class1.GetDataTable(SqlStr);
             dgvDetail2.DataSource = dt;
 
-            int column_num = 8;//總共0-7共8個欄位
-            int[] column_width = { 90, 110, 120, 120, 125, 90, 100, 100};//欄寬值
+            int column_num = 11;//總共0-11共12個欄位
+            int[] column_width = { 90, 110, 120, 120, 125, 90, 100, 100,100,100,100,100};//欄寬值
 
             Columns_for(column_num, column_width);
 
@@ -99,16 +100,16 @@ namespace CPCAIModule
             this.splitContainer1.SplitterDistance = splitContainer1.Height * 12 / 25;
             //上方高，比例法，離上方往下266
             //第2刀位置
-            this.splitContainer2.SplitterDistance = splitContainer1.Height * 10 / 37;
+            //this.splitContainer2.SplitterDistance = splitContainer1.Height * 10 / 37;
             //功能鍵高，比例法，離上方往下182
             //button
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
             //Class1.DropDownList_C("", "", "", "", CB1, "");
             //this.CB1.SelectedIndex = 0;
-            //反灰工站編號欄位
-            this.txt1.ReadOnly = true;
-            //反灰工站編號欄位
-            this.txt1.ReadOnly = true;
+            //建檔者編號
+            this.txt10.ReadOnly = true;
+            //建檔者時間
+            this.txt11.ReadOnly = true;
             button6_Click(sender,e);
         }
 
@@ -117,11 +118,11 @@ namespace CPCAIModule
         {
             //如果沒有欄位資料及中斷
             if (e.ColumnIndex < 0 || e.RowIndex < 0) return;
-            //工站代號
-            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站代號"].Value.ToString().Trim();
-            this.label_No.Text = this.txt1.Text;
             //工站名稱
             this.txt4.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
+            //工站編號
+            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
+            this.label_No.Text = this.txt1.Text;      
             //職能需求等級//下拉選項
             //this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
@@ -130,18 +131,24 @@ namespace CPCAIModule
 
             Class1.cbo_choose(arr_kind, kind, CB1);
 
-            //建檔時間.
-            //this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔時間"].Value.ToString().Trim();
             //職能等級
             this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能等級"].Value.ToString().Trim();
-            //員工代號
-            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工代號"].Value.ToString().Trim();
+            //項次
+            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["項次"].Value.ToString().Trim();
+            //部門
+            this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["部門"].Value.ToString().Trim();
+            //員工編號
+            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工編號"].Value.ToString().Trim();
             //職能資格員工姓名
-            this.txt8.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能資格員工姓名"].Value.ToString().Trim();     
-            //修改者代號
-            this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者代號"].Value.ToString().Trim();
-            //修改者時間
-            this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者時間"].Value.ToString().Trim();
+            this.txt8.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能資格員工姓名"].Value.ToString().Trim();
+            //建檔者編號
+            this.txt10.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔者編號"].Value.ToString().Trim();
+            //建檔時間
+            this.txt11.Text = dgvDetail2.Rows[e.RowIndex].Cells["建檔時間"].Value.ToString().Trim();
+            //修改者編號
+            this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改者編號"].Value.ToString().Trim();
+            //修改時間
+            this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["修改時間"].Value.ToString().Trim();
         }
         //查詢
         private void button1_Click(object sender, EventArgs e)
@@ -313,6 +320,11 @@ namespace CPCAIModule
         }
 
         private void txt11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

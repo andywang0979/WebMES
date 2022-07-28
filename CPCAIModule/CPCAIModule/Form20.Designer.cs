@@ -64,11 +64,11 @@
             this.CB2 = new System.Windows.Forms.ComboBox();
             this.dgvDetail2 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -178,12 +178,13 @@
             this.splitContainer1.Panel2.Controls.Add(this.dgvDetail2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Size = new System.Drawing.Size(877, 828);
-            this.splitContainer1.SplitterDistance = 408;
+            this.splitContainer1.SplitterDistance = 378;
             this.splitContainer1.TabIndex = 2273;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("標楷體", 13.8F);
+            this.button1.ForeColor = System.Drawing.Color.Blue;
             this.button1.Location = new System.Drawing.Point(146, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 32);
@@ -207,7 +208,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("標楷體", 14.25F);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(443, 49);
+            this.label10.Location = new System.Drawing.Point(490, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 19);
             this.label10.TabIndex = 12;
@@ -223,10 +224,11 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("標楷體", 13.8F);
-            this.button5.Location = new System.Drawing.Point(344, 362);
+            this.button5.Font = new System.Drawing.Font("標楷體", 12F);
+            this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button5.Location = new System.Drawing.Point(434, 41);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(58, 32);
+            this.button5.Size = new System.Drawing.Size(50, 27);
             this.button5.TabIndex = 11;
             this.button5.Text = "清除";
             this.button5.UseVisualStyleBackColor = true;
@@ -235,6 +237,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("標楷體", 13.8F);
+            this.button2.ForeColor = System.Drawing.Color.Blue;
             this.button2.Location = new System.Drawing.Point(219, 36);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(58, 32);
@@ -246,6 +249,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("標楷體", 13.8F);
+            this.button4.ForeColor = System.Drawing.Color.Blue;
             this.button4.Location = new System.Drawing.Point(366, 36);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 32);
@@ -268,6 +272,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("標楷體", 13.8F);
+            this.button3.ForeColor = System.Drawing.Color.Blue;
             this.button3.Location = new System.Drawing.Point(292, 36);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(58, 32);
@@ -348,11 +353,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(48, 321);
+            this.label12.Location = new System.Drawing.Point(65, 321);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 20);
+            this.label12.Size = new System.Drawing.Size(77, 20);
             this.label12.TabIndex = 2292;
-            this.label12.Text = "建檔者時間:";
+            this.label12.Text = "建檔時間:";
             // 
             // label6
             // 
@@ -409,11 +414,11 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(373, 321);
+            this.label14.Location = new System.Drawing.Point(389, 321);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 20);
+            this.label14.Size = new System.Drawing.Size(77, 20);
             this.label14.TabIndex = 2288;
-            this.label14.Text = "修改者時間:";
+            this.label14.Text = "修改時間:";
             // 
             // txt6
             // 
@@ -472,7 +477,7 @@
             // dgvDetail2
             // 
             this.dgvDetail2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetail2.Location = new System.Drawing.Point(12, 112);
+            this.dgvDetail2.Location = new System.Drawing.Point(12, 88);
             this.dgvDetail2.Name = "dgvDetail2";
             this.dgvDetail2.ReadOnly = true;
             this.dgvDetail2.RowTemplate.Height = 24;
@@ -488,15 +493,24 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(28, 14);
+            this.panel1.Location = new System.Drawing.Point(12, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 81);
+            this.panel1.Size = new System.Drawing.Size(575, 54);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(87, 13);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(148, 24);
+            this.comboBox1.TabIndex = 2277;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("新細明體", 10F);
-            this.textBox1.Location = new System.Drawing.Point(87, 43);
+            this.textBox1.Location = new System.Drawing.Point(321, 14);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 23);
             this.textBox1.TabIndex = 2276;
@@ -507,7 +521,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(11, 46);
+            this.label11.Location = new System.Drawing.Point(245, 17);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 2275;
@@ -517,7 +531,7 @@
             // 
             this.button6.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button6.ForeColor = System.Drawing.Color.Blue;
-            this.button6.Location = new System.Drawing.Point(241, 29);
+            this.button6.Location = new System.Drawing.Point(489, 11);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(62, 26);
             this.button6.TabIndex = 2233;
@@ -534,15 +548,6 @@
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 2232;
             this.label9.Text = "員工編號:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 24);
-            this.comboBox1.TabIndex = 2277;
             // 
             // Form20
             // 
