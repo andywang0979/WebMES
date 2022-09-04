@@ -11,7 +11,8 @@
     <RootNamespace>CPCAIModule</RootNamespace>
     <AssemblyName>CPCAIModule</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -364,6 +365,7 @@
     <EmbeddedResource Include="FormInputMsg_Pfd.resx">
       <DependentUpon>FormInputMsg_Pfd.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -56,14 +56,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -83,7 +83,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 37);
             this.button1.TabIndex = 0;
-            this.button1.Text = "客戶訂單資料作業";
+            this.button1.Text = "D1.客戶訂單資料作業";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -98,7 +98,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(221, 37);
             this.button2.TabIndex = 1;
-            this.button2.Text = "備料集結檔維護";
+            this.button2.Text = "D3.備料集結檔維護";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -113,7 +113,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(221, 37);
             this.button3.TabIndex = 2;
-            this.button3.Text = "發料單維護";
+            this.button3.Text = "B2.發料單維護";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -142,7 +142,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(221, 37);
             this.button5.TabIndex = 4;
-            this.button5.Text = "備料清單檔維護";
+            this.button5.Text = "D2.備料清單檔維護";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -157,7 +157,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(221, 37);
             this.button6.TabIndex = 5;
-            this.button6.Text = "生產工令單維護";
+            this.button6.Text = "B1.生產工令單維護";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -172,7 +172,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(221, 46);
             this.button7.TabIndex = 6;
-            this.button7.Text = "工模夾治具設備\\\\n儀器維護";
+            this.button7.Text = "C1.工模夾治具設備儀器維護";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -187,7 +187,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(221, 46);
             this.button8.TabIndex = 7;
-            this.button8.Text = "工模夾治具量測儀器清單檔";
+            this.button8.Text = "C2.工模夾治具量測儀器清單檔";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -202,7 +202,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(221, 37);
             this.button9.TabIndex = 9;
-            this.button9.Text = "標準工時檔作業";
+            this.button9.Text = "A5.標準工時檔作業";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -218,7 +218,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(221, 37);
             this.button10.TabIndex = 8;
-            this.button10.Text = "製品基本資料建檔作業";
+            this.button10.Text = "A1.製品基本資料建檔作業";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -233,7 +233,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(221, 37);
             this.button11.TabIndex = 10;
-            this.button11.Text = "移轉單維護";
+            this.button11.Text = "B3.移轉單維護";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -248,7 +248,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(221, 46);
             this.button12.TabIndex = 11;
-            this.button12.Text = "設備清單檔維護";
+            this.button12.Text = "C3設備清單檔維護";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -263,7 +263,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(221, 37);
             this.button13.TabIndex = 12;
-            this.button13.Text = "參數設定檔作業";
+            this.button13.Text = "A6.參數設定檔作業";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -278,7 +278,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(221, 37);
             this.button14.TabIndex = 13;
-            this.button14.Text = "設備工時檔作業";
+            this.button14.Text = "A7.設備工時檔作業";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -293,7 +293,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(221, 37);
             this.button15.TabIndex = 14;
-            this.button15.Text = "人員工時檔作業";
+            this.button15.Text = "A8.人員工時檔作業";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -308,7 +308,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(221, 37);
             this.button16.TabIndex = 15;
-            this.button16.Text = "品質檢驗維護";
+            this.button16.Text = "B4.品質檢驗維護";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
@@ -324,7 +324,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(221, 37);
             this.button17.TabIndex = 16;
-            this.button17.Text = "原物料基本檔建檔作業";
+            this.button17.Text = "A2.原物料基本檔建檔作業";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -340,7 +340,7 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(221, 37);
             this.button18.TabIndex = 17;
-            this.button18.Text = "製程基本資料建檔作業";
+            this.button18.Text = "A3.製程基本資料建檔作業";
             this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
@@ -356,7 +356,7 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(221, 37);
             this.button19.TabIndex = 18;
-            this.button19.Text = "客戶資料建檔作業";
+            this.button19.Text = "A9.客戶資料建檔作業";
             this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
@@ -372,7 +372,7 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(221, 37);
             this.button20.TabIndex = 19;
-            this.button20.Text = "途程基本資料建檔作業";
+            this.button20.Text = "A4.途程基本資料建檔作業";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -504,6 +504,96 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "品質管理模組";
             // 
+            // button30
+            // 
+            this.button30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button30.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button30.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button30.Location = new System.Drawing.Point(41, 240);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(221, 37);
+            this.button30.TabIndex = 26;
+            this.button30.Text = "F6.8D報告資料";
+            this.button30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button30.UseVisualStyleBackColor = false;
+            // 
+            // button29
+            // 
+            this.button29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button29.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button29.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button29.Location = new System.Drawing.Point(41, 199);
+            this.button29.Margin = new System.Windows.Forms.Padding(2);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(221, 37);
+            this.button29.TabIndex = 25;
+            this.button29.Text = "F5.不合格品管理資料";
+            this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            this.button28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button28.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button28.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button28.Location = new System.Drawing.Point(41, 117);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(221, 37);
+            this.button28.TabIndex = 24;
+            this.button28.Text = "F3.供應商品質管理資料";
+            this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button28.UseVisualStyleBackColor = false;
+            // 
+            // button27
+            // 
+            this.button27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button27.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button27.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button27.Location = new System.Drawing.Point(41, 158);
+            this.button27.Margin = new System.Windows.Forms.Padding(2);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(221, 37);
+            this.button27.TabIndex = 23;
+            this.button27.Text = "F4.製品檢驗計畫";
+            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button27.UseVisualStyleBackColor = false;
+            // 
+            // button26
+            // 
+            this.button26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button26.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button26.Location = new System.Drawing.Point(41, 76);
+            this.button26.Margin = new System.Windows.Forms.Padding(2);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(221, 37);
+            this.button26.TabIndex = 22;
+            this.button26.Text = "F2.進料待檢驗項目資料畫面";
+            this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button26.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            this.button25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button25.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button25.Location = new System.Drawing.Point(40, 31);
+            this.button25.Margin = new System.Windows.Forms.Padding(2);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(222, 37);
+            this.button25.TabIndex = 21;
+            this.button25.Text = "F1.進料檢驗計畫資料建檔作業";
+            this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button25.UseVisualStyleBackColor = false;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button7);
@@ -530,100 +620,11 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "備料管理模組";
             // 
-            // button25
-            // 
-            this.button25.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button25.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button25.Location = new System.Drawing.Point(40, 31);
-            this.button25.Margin = new System.Windows.Forms.Padding(2);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(222, 37);
-            this.button25.TabIndex = 21;
-            this.button25.Text = "F1.進料檢驗計畫資料建檔作業";
-            this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.UseVisualStyleBackColor = false;
-            // 
-            // button26
-            // 
-            this.button26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button26.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button26.Location = new System.Drawing.Point(41, 76);
-            this.button26.Margin = new System.Windows.Forms.Padding(2);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(221, 37);
-            this.button26.TabIndex = 22;
-            this.button26.Text = "F2.進料待檢驗項目資料畫面";
-            this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // button27
-            // 
-            this.button27.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button27.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button27.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button27.Location = new System.Drawing.Point(41, 158);
-            this.button27.Margin = new System.Windows.Forms.Padding(2);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(221, 37);
-            this.button27.TabIndex = 23;
-            this.button27.Text = "F4.製品檢驗計畫";
-            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button27.UseVisualStyleBackColor = false;
-            // 
-            // button28
-            // 
-            this.button28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button28.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button28.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button28.Location = new System.Drawing.Point(41, 117);
-            this.button28.Margin = new System.Windows.Forms.Padding(2);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(221, 37);
-            this.button28.TabIndex = 24;
-            this.button28.Text = "F3.供應商品質管理資料";
-            this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // button29
-            // 
-            this.button29.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button29.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button29.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button29.Location = new System.Drawing.Point(41, 199);
-            this.button29.Margin = new System.Windows.Forms.Padding(2);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(221, 37);
-            this.button29.TabIndex = 25;
-            this.button29.Text = "F5.不合格品管理資料";
-            this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // button30
-            // 
-            this.button30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button30.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button30.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button30.Location = new System.Drawing.Point(41, 240);
-            this.button30.Margin = new System.Windows.Forms.Padding(2);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(221, 37);
-            this.button30.TabIndex = 26;
-            this.button30.Text = "F6.8D報告資料";
-            this.button30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button30.UseVisualStyleBackColor = false;
-            // 
             // FmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1138, 816);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);

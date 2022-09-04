@@ -40,13 +40,13 @@ namespace CPCAIModule
         //查詢函式
         private void Form_Query(string where_str)
         {
-            SqlStr = "SELECT A.Ws_Code as '工站代號',"
+            SqlStr = "SELECT A.Ws_Code as '工站編號',"
                 + "A.Ws_Name as '工站名稱',"
-                + "A.Dis_Staff_Code as '派工員代號',"
+                + "A.Dis_Staff_Code as '派工員編號',"
                 + "A.Staff_Name as '派工員名稱',"
                 + "A.Fun_need_level as '職能需求等級',"
                 + "convert(varchar,A.Time,120) as '時間',"
-                + "A.Emp_Code as '員工代號',"
+                + "A.Emp_Code as '員工編號',"
                 + "A.Fun_Qua_Emp_Name as '職能資格員工姓名',"
                 + "A.Send_Workers_to_Check as '派工勾選'"
                 + "FROM Per_Ass_Inf A "
@@ -93,11 +93,19 @@ namespace CPCAIModule
             this.splitContainer1.SplitterDistance = splitContainer1.Height * 12 / 25;
             //上方高，比例法，離上方往下266
             //第2刀位置
-            this.splitContainer2.SplitterDistance = splitContainer1.Height * 10 / 37;
+            //this.splitContainer2.SplitterDistance = splitContainer1.Height * 10 / 37;
             //功能鍵高，比例法，離上方往下182
             //button2
             //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", comboBox1, "where goods_MachineNo<>''");
             // this.comboBox1.SelectedIndex = 0;
+           
+            //反灰工站編號欄位
+            this.txt1.ReadOnly = true;
+            //反灰派工員姓名:欄位
+            this.txt3.ReadOnly = true;
+            //反灰職能需求等級欄位
+            this.txt5.ReadOnly = true;
+
             button6_Click(sender, e);
         }
         //點擊資料
@@ -105,36 +113,36 @@ namespace CPCAIModule
         {
             //如果沒有欄位資料就中斷
             if (e.ColumnIndex < 0 || e.RowIndex < 0) return;
-            //工站代號
-            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站代號"].Value.ToString().Trim();
+            //工站編號
+            this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
 
             this.label_No.Text = this.txt1.Text;
 
             //工站名稱
             this.txt4.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
 
-            //派工員代號
-            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["派工員代號"].Value.ToString().Trim();
+            //派工員編號
+            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["派工員編號"].Value.ToString().Trim();
             //派工員名稱
             this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["派工員名稱"].Value.ToString().Trim();
             //職能需求等級
             this.txt5.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
             //時間
             this.txt6.Text = dgvDetail2.Rows[e.RowIndex].Cells["時間"].Value.ToString().Trim();
-            //員工代號
-            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工代號"].Value.ToString().Trim();
+            //員工編號
+            this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工編號"].Value.ToString().Trim();
             //職能資格員工姓名
             this.txt8.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能資格員工姓名"].Value.ToString().Trim();
             //派工勾選
             //this.ckb1.Text = dgvDetail2.Rows[e.RowIndex].Cells["派工勾選"].Value.ToString().Trim();
-            this.ckb1.Checked = (dgvDetail2.Rows[e.RowIndex].Cells["派工勾選"].Value.ToString().Trim() == "Y") ? true : false;
+            //this.ckb1.Checked = (dgvDetail2.Rows[e.RowIndex].Cells["派工勾選"].Value.ToString().Trim() == "Y") ? true : false;
 
         }
         //查詢
         private void button1_Click(object sender, EventArgs e)
         {
             string where_A = "";
-            if (this.txt1.Text.Trim() != "")//員工代號
+            if (this.txt1.Text.Trim() != "")//員工編號
                 where_A = "and A.Ws_Code like '%" + txt1.Text.Trim() + "%'";
 
             Form_Query(where_A);
@@ -143,7 +151,8 @@ namespace CPCAIModule
         private void button5_Click(object sender, EventArgs e)
         {
             this.txt1.Text = ""; this.txt4.Text = ""; this.txt2.Text = "";
-            this.txt3.Text = ""; this.txt5.Text = ""; this.txt6.Text = ""; this.txt7.Text = ""; this.txt8.Text = ""; this.ckb1.Text = "";
+            this.txt3.Text = ""; this.txt5.Text = ""; this.txt6.Text = ""; this.txt7.Text = ""; this.txt8.Text = ""; 
+            //this.ckb1.Text = "";
             this.label_No.Text = "";
 
         }
@@ -153,7 +162,7 @@ namespace CPCAIModule
             bool isOK = true;
             if (txt1.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『工站代號』資料...");
+                MessageBox.Show("請先輸入『工站編號』資料...");
                 return false;
             }
             if (txt4.Text.Trim() == "")
@@ -163,7 +172,7 @@ namespace CPCAIModule
             }
             if (txt2.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『派工員代號』資料...");
+                MessageBox.Show("請先輸入『派工員編號』資料...");
                 return false;
             }
             if (txt3.Text.Trim() == "")
@@ -181,11 +190,11 @@ namespace CPCAIModule
             //檢查是否重複
             if (Class1.GetRowCount("Per_Ass_Inf", "Ws_Code='" + txt1.Text.Trim() + "'") > 0)
             {
-                MessageBox.Show("請注意『工站代號：" + txt1.Text.Trim() + "』資料，已存在..."); 
+                MessageBox.Show("請注意『工站編號：" + txt1.Text.Trim() + "』資料，已存在..."); 
                 return;
             }
 
-            string isYorN = (this.ckb1.Checked == true) ? "Y" : "N";//派工勾選
+            //string isYorN = (this.ckb1.Checked == true) ? "Y" : "N";//派工勾選
 
             //Insert
             SqlStr = "INSERT INTO Per_Ass_Inf" + " (Ws_Code, Ws_Name, Dis_Staff_Code, Staff_Name, Fun_need_level, Time, Emp_Code, Fun_Qua_Emp_Name,Send_Workers_to_Check) " 
@@ -197,8 +206,8 @@ namespace CPCAIModule
                 + "'" + txt5.Text.Trim() + "',"
                 + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
                 + "'" + txt7.Text.Trim() + "',"
-                + "'" + txt8.Text.Trim() + "',"
-                + "'" + isYorN + "'"
+                + "'" + txt8.Text.Trim() + "'"
+                //+ "'" + isYorN + "'"
                 +")";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("新增資料完成...");
@@ -210,10 +219,10 @@ namespace CPCAIModule
         {
             if (txt1.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入欲刪除之『工站代號』...");
+                MessageBox.Show("請先輸入欲刪除之『工站編號』...");
                 return;     
             }
-            if (MessageBox.Show(this, "確定要刪除『工站代號』為:" + this.txt1.Text.Trim() + "的資料嗎?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(this, "確定要刪除『工站編號』為:" + this.txt1.Text.Trim() + "的資料嗎?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 SqlStr = "Delete from Per_Ass_Inf "
                     + "where Ws_Code='" + this.txt1.Text.Trim() + "'";
@@ -228,7 +237,7 @@ namespace CPCAIModule
         {
             if (Form_chk() == false) return;
             //派工勾選
-            string isYorN = (this.ckb1.Checked == true)?"Y":"N";
+           // string isYorN = (this.ckb1.Checked == true)?"Y":"N";
 
             //update
             SqlStr = "update Per_Ass_Inf set "
@@ -239,9 +248,9 @@ namespace CPCAIModule
             + "Fun_need_level = '" + txt5.Text.Trim() + "',"        
             + "Time = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',"
             + "Emp_Code = '" + txt7.Text.Trim() + "',"
-            + "Fun_Qua_Emp_Name = '" + txt8.Text.Trim() + "',"
+            + "Fun_Qua_Emp_Name = '" + txt8.Text.Trim() + "'"
             //+ "Send_Workers_to_Check = '" + txt3.Text.Trim() + "'"
-            + "Send_Workers_to_Check = '" + isYorN.Trim() + "'"
+            //+ "Send_Workers_to_Check = '" + isYorN.Trim() + "'"
             + "where Ws_Code = '" + this.label_No.Text + "'";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("修改資料完成...");

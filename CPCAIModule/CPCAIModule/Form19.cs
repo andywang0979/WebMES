@@ -103,9 +103,14 @@ namespace CPCAIModule
             //this.splitContainer2.SplitterDistance = splitContainer1.Height * 10 / 37;
             //功能鍵高，比例法，離上方往下182
             //button
-            //Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
-            //Class1.DropDownList_C("", "", "", "", CB1, "");
-            //this.CB1.SelectedIndex = 0;
+            Class1.DropDownList_B("goods_MachineNo", "goods_Basic", CB1, "where goods_MachineNo<>''");
+
+            this.CB1.SelectedIndex = 0;
+
+            //員工編號
+            this.txt7.ReadOnly = true;
+            //職能資格員工姓名
+            this.txt8.ReadOnly = true;
             //建檔者編號
             this.txt10.ReadOnly = true;
             //建檔者時間
@@ -122,7 +127,7 @@ namespace CPCAIModule
             this.txt4.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站名稱"].Value.ToString().Trim();
             //工站編號
             this.txt1.Text = dgvDetail2.Rows[e.RowIndex].Cells["工站編號"].Value.ToString().Trim();
-            this.label_No.Text = this.txt1.Text;      
+            this.label_N.Text = this.txt1.Text;      
             //職能需求等級//下拉選項
             //this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
             string kind = dgvDetail2.Rows[e.RowIndex].Cells["職能需求等級"].Value.ToString().Trim();
@@ -134,9 +139,9 @@ namespace CPCAIModule
             //職能等級
             this.txt9.Text = dgvDetail2.Rows[e.RowIndex].Cells["職能等級"].Value.ToString().Trim();
             //項次
-            this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["項次"].Value.ToString().Trim();
+            //this.txt2.Text = dgvDetail2.Rows[e.RowIndex].Cells["項次"].Value.ToString().Trim();
             //部門
-            this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["部門"].Value.ToString().Trim();
+            //this.txt3.Text = dgvDetail2.Rows[e.RowIndex].Cells["部門"].Value.ToString().Trim();
             //員工編號
             this.txt7.Text = dgvDetail2.Rows[e.RowIndex].Cells["員工編號"].Value.ToString().Trim();
             //職能資格員工姓名
@@ -154,7 +159,7 @@ namespace CPCAIModule
         private void button1_Click(object sender, EventArgs e)
         {
             string where_A = "";
-            if (this.txt1.Text.Trim() != "") //工站代號
+            if (this.txt1.Text.Trim() != "") //工站編號
                 where_A = "and A.Ws_Code like '%" + txt1.Text.Trim() + "%'";
 
             Form_Query(where_A);
@@ -162,13 +167,13 @@ namespace CPCAIModule
         //清除
         private void button5_Click(object sender, EventArgs e)
         {
-            this.txt1.Text = ""; this.txt4.Text = "";
-            //this.txt2.Text = "";
+            this.txt1.Text = ""; 
+            this.txt4.Text = "";           
             this.txt5.Text = "";
             //this.txt3.Text = "";
             this.txt6.Text = ""; this.txt7.Text = ""; this.txt8.Text = "";
             this.txt9.Text = "";
-            this.label_No.Text = "";
+            this.label_N.Text = "";
         }
         //檢查空欄位
         private bool Form_chk()
@@ -176,7 +181,7 @@ namespace CPCAIModule
             bool isOK = true;
             if (txt1.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『工站代號』資料...");
+                MessageBox.Show("請先輸入『工站編號』資料...");
                 return false;
             }
             if (txt4.Text.Trim() == "")
@@ -186,7 +191,7 @@ namespace CPCAIModule
             }        
             if (txt7.Text.Trim() == "")
             {
-                MessageBox.Show("請先輸入『員工代號』資料...");
+                MessageBox.Show("請先輸入『員工編號』資料...");
                 return false;
             }
             //if (CB1.SelectedItem.ToString().Trim() == "")
@@ -303,7 +308,7 @@ namespace CPCAIModule
                 + "Emp_Code = '" + txt7.Text.Trim() + "',"
                 + "Fun_Qua_Emp_Name = '" + txt8.Text.Trim() + "',"
                 + "Fun_Level = '" + txt9.Text.Trim() + "'"
-                + " where Ws_Code = '" + this.label_No.Text + "'";
+                + " where Ws_Code = '" + this.label_N.Text + "'";
             Class1.Execute_SQL(SqlStr);
             MessageBox.Show("修改資料完成...");
             button5_Click(sender, e);//清除

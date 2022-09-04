@@ -446,3 +446,4 @@ D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.Properties.Resources.re
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.csproj.GenerateResource.Cache
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.InputBox_Pfd.resources
 D:\Git\CPCAIModule\CPCAIModule\obj\x86\Debug\CPCAIModule.csprojResolveAssemblyReference.cache
+D:\Git\CPCAIModule\CPCAIModule\bin\debug\CPCAIModule.exe.config
