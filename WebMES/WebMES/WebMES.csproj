@@ -97,19 +97,24 @@
     <Content Include="Admin\CustACPage.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\Machine.aspx" />
+    <Content Include="Admin\Machine2.aspx" />
     <Content Include="Admin\MainMenuPanel.ascx" />
     <Content Include="Admin\ManuMach.aspx" />
     <Content Include="Admin\ManuMenuPanel.ascx" />
     <Content Include="Admin\MaRout.aspx" />
     <Content Include="Admin\MaRoutPage.aspx" />
     <Content Include="Admin\OrganMain.aspx" />
-    <Content Include="TestAndy\AW001.aspx" />
-    <Content Include="TestAndy\AW002.aspx" />
-    <Content Include="TestAndy\AW003.aspx" />
     <Content Include="Test\TW004.aspx" />
     <Content Include="Test\TW001.aspx" />
     <Content Include="Test\TW002.aspx" />
     <Content Include="Test\TW003.aspx" />
+    <Compile Include="Admin\Machine2.aspx.cs">
+      <DependentUpon>Machine2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Machine2.aspx.designer.cs">
+      <DependentUpon>Machine2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Lead_Publ.cs" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -184,27 +189,6 @@
     </Compile>
     <Compile Include="Admin\OrganMain.aspx.designer.cs">
       <DependentUpon>OrganMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TestAndy\AW001.aspx.cs">
-      <DependentUpon>AW001.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestAndy\AW001.aspx.designer.cs">
-      <DependentUpon>AW001.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TestAndy\AW002.aspx.cs">
-      <DependentUpon>AW002.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestAndy\AW002.aspx.designer.cs">
-      <DependentUpon>AW002.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TestAndy\AW003.aspx.cs">
-      <DependentUpon>AW003.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestAndy\AW003.aspx.designer.cs">
-      <DependentUpon>AW003.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\TW004.aspx.cs">
       <DependentUpon>TW004.aspx</DependentUpon>

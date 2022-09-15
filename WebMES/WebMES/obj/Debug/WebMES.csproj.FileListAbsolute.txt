@@ -107,7 +107,6 @@ D:\Git\WebMES\WebMES\bin\ja\DevExpress.Office.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\bin\de\DevExpress.XtraScheduler.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\bin\es\DevExpress.XtraScheduler.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\bin\ja\DevExpress.XtraScheduler.v22.1.Core.resources.dll
-D:\Git\WebMES\WebMES\obj\Debug\WebMES.csprojAssemblyReference.cache
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.csproj.CoreCompileInputs.cache
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.csproj.CopyComplete
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.dll
@@ -148,3 +147,4 @@ D:\Git\WebMES\WebMES\bin\de\DevExpress.Sparkline.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\bin\es\DevExpress.Sparkline.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\bin\ja\DevExpress.Sparkline.v22.1.Core.resources.dll
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.dll.licenses
+D:\Git\WebMES\WebMES\obj\Debug\WebMES.csprojAssemblyReference.cache

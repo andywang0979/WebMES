@@ -23,8 +23,6 @@
                     </dx:MenuItem>
                     <dx:MenuItem Text="開發範例" Name="T0000" NavigateUrl="~/Admin/Default.aspx" ToolTip="開發範例">
                     </dx:MenuItem>
-                     <dx:MenuItem Text="開發範例2" Name="T0002" NavigateUrl="~/Admin/Default2.aspx" ToolTip="開發範例2">
-                    </dx:MenuItem>
                     <dx:MenuItem Text="途程規劃" Name="A0000" NavigateUrl="~/Default.aspx" Visible="False">
                     </dx:MenuItem>
                     <dx:MenuItem Text="備料管理" Name="B0000" NavigateUrl="~/Default.aspx" Visible="False">

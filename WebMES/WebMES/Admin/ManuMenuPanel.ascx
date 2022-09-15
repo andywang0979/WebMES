@@ -70,8 +70,20 @@
                             <Paddings PaddingLeft="20px" PaddingRight="0px" />
                         </ItemStyle>
                     </dx:NavBarGroup>
+                     <%--單檔開發 star--%> 
+                    <dx:NavBarGroup Text="單檔開發" Expanded="False" Name="TC000">
+                        <Items>
+                            <dx:NavBarItem Text="機器設定" NavigateUrl="~/Admin/Machine2.aspx" Name="TA001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
+                            </dx:NavBarItem>
+                        </Items>
+                        <ItemStyle>
+                            <Paddings PaddingLeft="20px" PaddingRight="0px" />
+                        </ItemStyle>
+                    </dx:NavBarGroup>
+                    <%--單檔開發 end--%>
                     <dx:NavBarGroup Expanded="False" Name="L0000" NavigateUrl="~\Admin\Default.aspx" Text="尚未登入">
                     </dx:NavBarGroup>
+
                 </Groups>
             </dx:ASPxNavBar>
         </dx:PanelContent>
