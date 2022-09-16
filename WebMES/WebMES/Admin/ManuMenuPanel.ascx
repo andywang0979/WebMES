@@ -71,7 +71,7 @@
                         </ItemStyle>
                     </dx:NavBarGroup>
                      <%--單檔開發 star--%> 
-                    <dx:NavBarGroup Text="單檔開發" Expanded="False" Name="TC000">
+                    <dx:NavBarGroup Text="單檔-網格-編輯:DevSFEditGrid" Expanded="False" Name="TC000">
                         <Items>
                             <dx:NavBarItem Text="機器設定" NavigateUrl="~/Admin/Machine2.aspx" Name="TA001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
                             </dx:NavBarItem>

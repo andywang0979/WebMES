@@ -47,15 +47,6 @@ D:\Git\WebMES\WebMES\bin\roslyn\vbc.exe.config
 D:\Git\WebMES\WebMES\bin\roslyn\vbc.rsp
 D:\Git\WebMES\WebMES\bin\roslyn\VBCSCompiler.exe
 D:\Git\WebMES\WebMES\bin\roslyn\VBCSCompiler.exe.config
-D:\Git\WebMES\WebMES\bin\DevExpress.Data.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Printing.v22.1.Core.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.RichEdit.v22.1.Core.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Web.ASPxScheduler.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Web.ASPxThemes.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Web.ASPxTreeList.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Web.Resources.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.Web.v22.1.dll
-D:\Git\WebMES\WebMES\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.Drawing.v22.1.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.Pdf.v22.1.Core.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.Pdf.v22.1.Drawing.dll
@@ -111,8 +102,6 @@ D:\Git\WebMES\WebMES\obj\Debug\WebMES.csproj.CoreCompileInputs.cache
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.csproj.CopyComplete
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.dll
 D:\Git\WebMES\WebMES\obj\Debug\WebMES.pdb
-D:\Git\WebMES\WebMES\bin\DevExpress.Utils.v22.1.dll
-D:\Git\WebMES\WebMES\bin\DevExpress.XtraPrinting.v22.1.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.XtraLayout.v22.1.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.XtraEditors.v22.1.dll
 D:\Git\WebMES\WebMES\bin\DevExpress.XtraBars.v22.1.dll
