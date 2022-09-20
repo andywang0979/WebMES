@@ -290,7 +290,7 @@ else if (i.substring(0,9) ==&quot;NavgPrint&quot;)
                                 <SettingsPopup>
                                     <EditForm AllowResize="True" Modal="True" Width="800px" />
 
-<HeaderFilter MinHeight="140px"></HeaderFilter>
+                                    <HeaderFilter MinHeight="140px"></HeaderFilter>
                                 </SettingsPopup>
                                 <SettingsSearchPanel CustomEditorID="SearchTextBox" />
                                 <SettingsText CommandDelete="刪除" CommandEdit="編輯" CommandNew="新增" SearchPanelEditorNullText="請輸入關鍵字" CommandCancel="取消" CommandUpdate="存入" Title="員工履歷" />
@@ -350,8 +350,8 @@ else if (i.substring(0,9) ==&quot;NavgPrint&quot;)
                                 <Panes>
                                     <dx:SplitterPane Name="sppPageView" ScrollBars="Auto" ContentUrl="CustACPage.aspx">
                                         <ContentCollection>
-<dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
-</ContentCollection>
+                                            <dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
+                                        </ContentCollection>
                                     </dx:SplitterPane>
                                 </Panes>
                             </dx:ASPxSplitter>
@@ -372,7 +372,7 @@ else if (i.substring(0,9) ==&quot;NavgPrint&quot;)
             ASPxClientControl.GetControlCollection().BrowserWindowResized.AddHandler(function (s, e) {
                 UpdateGridHeight();
             });
-            // ]]> 
+            // ]]>
         </script>
 
         <dx:ASPxPopupControl ID="pclSearchPanel" runat="server" CloseAction="CloseButton" CloseOnEscape="True" Modal="True"

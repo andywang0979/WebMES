@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\CustAC.aspx" />
+    <Content Include="Admin\CustAC2.aspx" />
     <Content Include="Admin\CustACPage.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\Machine.aspx" />
@@ -390,6 +391,13 @@
     <Content Include="Test\TW001.aspx" />
     <Content Include="Test\TW002.aspx" />
     <Content Include="Test\TW003.aspx" />
+    <Compile Include="Admin\CustAC2.aspx.cs">
+      <DependentUpon>CustAC2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustAC2.aspx.designer.cs">
+      <DependentUpon>CustAC2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Machine2.aspx.cs">
       <DependentUpon>Machine2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
