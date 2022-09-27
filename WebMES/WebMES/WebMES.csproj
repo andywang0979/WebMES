@@ -97,6 +97,7 @@
     <Content Include="Admin\CustAC2.aspx" />
     <Content Include="Admin\CustACPage.aspx" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Emp.aspx" />
     <Content Include="Admin\Machine.aspx" />
     <Content Include="Admin\Machine2.aspx" />
     <Content Include="Admin\MainMenuPanel.ascx" />
@@ -397,6 +398,13 @@
     </Compile>
     <Compile Include="Admin\CustAC2.aspx.designer.cs">
       <DependentUpon>CustAC2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Emp.aspx.cs">
+      <DependentUpon>Emp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Emp.aspx.designer.cs">
+      <DependentUpon>Emp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Machine2.aspx.cs">
       <DependentUpon>Machine2.aspx</DependentUpon>

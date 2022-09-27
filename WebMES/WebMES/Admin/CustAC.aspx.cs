@@ -73,7 +73,7 @@ namespace WebMES.Admin
             //strInsertContentUrl = "'CustACPage.aspx?EditMode=1'";
             //strEditContentUrl = "'CustACPage.aspx?EditMode=2&CUSNO=' + values";
             //strDeleteContentUrl = "'CustACPage.aspx?EditMode=3&CUSNO=' + values";
-            if (!IsPostBack)  //首次加載               第一次加載，IsPostBack值為true   ->取反，true
+            if (!IsPostBack)  //首次加載               第一次加載IsPostBack值為false   ->取反，true
             {
                 cbxBDPTNO.Value = Session["ActDeptID"] == null ? Session["CurDeptID"] : Session["ActDeptID"];
                 cbxBPRSNNOSet(cbxBDPTNO.Value.ToString());

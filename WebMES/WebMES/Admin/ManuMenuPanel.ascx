@@ -71,11 +71,13 @@
                         </ItemStyle>
                     </dx:NavBarGroup>
                      <%--單檔開發 star--%> 
-                    <dx:NavBarGroup Text="單檔-網格-編輯:DevSFEditGrid" Expanded="False" Name="TC000">
+                    <dx:NavBarGroup Text="單檔-網格-編輯:DevSFEditGrid" Expanded="False" Name="TD000">
                         <Items>
-                            <dx:NavBarItem Text="機器設定" NavigateUrl="~/Admin/Machine2.aspx" Name="TA001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
+                            <dx:NavBarItem Text="機器設定" NavigateUrl="~/Admin/Machine2.aspx" Name="TD001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
                             </dx:NavBarItem>
-                              <dx:NavBarItem Text="客戶資料維護" NavigateUrl="~/Admin/CustAC2.aspx" Name="TA001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
+                              <dx:NavBarItem Text="客戶資料維護" NavigateUrl="~/Admin/CustAC2.aspx" Name="TD002" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="員工資料維護" NavigateUrl="~/Admin/Emp.aspx" Name="TD003" ToolTip="單檔-網格-調閱編輯 DevDFEditTPagGrid">
                             </dx:NavBarItem>
                         </Items>
                         <ItemStyle>
