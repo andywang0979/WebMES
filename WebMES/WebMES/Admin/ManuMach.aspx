@@ -505,7 +505,7 @@ ORDER BY ManuMach.MACHINID">
 FROM Machine LEFT JOIN ManuLine ON (Machine.MLINEID = ManuLine.MLINEID)
  LEFT JOIN Fact ON (ManuLine.FACTNO = Fact.FACTNO) 
 ORDER BY Machine.MACHINID"
-            UpdateCommand="UPDATE [Machine] SET [MACHINNM] = @MACHINNM, [CAPACITY] = @CAPACITY, [LOADRATE] = @LOADRATE, [MACHINDESC] = @MACHINDESC, [MLINEID] = @MLINEID WHERE [MACHINID] = @MACHINID">
+            UpdateCommand="UPDATE [Machine] SET [MACHINNM] = @MACHINNM, [CAPACITY] = @CAPACITY, [LOADRATE] = @LOADRATE, [MACHINDESC] = @MACHINDESC, [MLINEID] = @MLINEID WHERE [MACHINID] = @MACHINID" ProviderName="<%$ ConnectionStrings:WinSisTmplConnectionString.ProviderName %>">
             <DeleteParameters>
                 <asp:Parameter Name="MACHINID" Type="String" />
             </DeleteParameters>

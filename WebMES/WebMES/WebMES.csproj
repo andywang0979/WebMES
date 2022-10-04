@@ -102,6 +102,7 @@
     <Content Include="Admin\Machine2.aspx" />
     <Content Include="Admin\MainMenuPanel.ascx" />
     <Content Include="Admin\ManuMach.aspx" />
+    <Content Include="Admin\ManuMach2.aspx" />
     <Content Include="Admin\ManuMenuPanel.ascx" />
     <Content Include="Admin\MaRout.aspx" />
     <Content Include="Admin\MaRoutPage.aspx" />
@@ -412,6 +413,13 @@
     </Compile>
     <Compile Include="Admin\Machine2.aspx.designer.cs">
       <DependentUpon>Machine2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManuMach2.aspx.cs">
+      <DependentUpon>ManuMach2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManuMach2.aspx.designer.cs">
+      <DependentUpon>ManuMach2.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Lead_Publ.cs" />
     <Content Include="Default.aspx" />

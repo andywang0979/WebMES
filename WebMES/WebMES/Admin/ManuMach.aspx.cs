@@ -112,6 +112,8 @@ namespace WebMES.Admin
                 MainDBGrid.DetailRows.ExpandRow(0);
         }
         */
+
+        //撰寫由使用者設定的條件篩選符合資料的程式碼
         protected override void btnGoFilter_Click(object sender, EventArgs e)
         {
             pclSearchPanel.ShowOnPageLoad = false;

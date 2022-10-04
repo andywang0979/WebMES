@@ -699,7 +699,7 @@ WHERE Prsn.QUITDT IS NULL
 ORDER BY  Prsn.PRSNNO"></asp:SqlDataSource>
 
         <asp:SqlDataSource ID="sdsUnit" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>" SelectCommand="SELECT [UNITNO], [UNITNM] FROM [Unit]"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="sdsMaPop" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sdsMaPop" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>"></asp:SqlDataSource>       
 
     </form>
 </body>

@@ -173,19 +173,7 @@ else if (i.substring(0,9) ==&quot;NavgPrint&quot;)
                             <dx:GridViewDataTextColumn Caption="手機" FieldName="PHONE" ShowInCustomizationForm="True" VisibleIndex="1" Width="8%">
                             </dx:GridViewDataTextColumn>                            
                             <dx:GridViewDataTextColumn Caption="地址" FieldName="ADDRESS" ShowInCustomizationForm="True" VisibleIndex="1" Width="8%">
-                            </dx:GridViewDataTextColumn>                                      
-                     <%--       <dx:GridViewDataTextColumn Caption="機器代碼" FieldName="MACHINID" ShowInCustomizationForm="True" VisibleIndex="1" Width="8%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="機器名稱" FieldName="MACHINNM" ShowInCustomizationForm="True" VisibleIndex="2" Width="14%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="機器產能" FieldName="CAPACITY" ShowInCustomizationForm="True" VisibleIndex="3" Width="6%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="產線代碼" FieldName="MLINEID" ShowInCustomizationForm="True" VisibleIndex="4" Width="6%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="產線名稱" FieldName="MLINENM" ShowInCustomizationForm="True" VisibleIndex="5" Width="12%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="廠區名稱" FieldName="FACTNM" ShowInCustomizationForm="True" VisibleIndex="6" Width="12%">
-                            </dx:GridViewDataTextColumn>--%>
+                            </dx:GridViewDataTextColumn>                                                         
                         </Columns>
                         <Styles>
                             <AlternatingRow Enabled="True">
@@ -209,6 +197,78 @@ else if (i.substring(0,9) ==&quot;NavgPrint&quot;)
             // ]]>
         </script>
 
+       <%-- <dx:ASPxPopupControl ID="pclSearchPanel" runat="server" CloseAction="CloseButton" CloseOnEscape="True" Modal="True"
+            PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ClientInstanceName="pclSearchPanel"
+            HeaderText="設定查詢條件" AllowDragging="True" PopupAnimationType="None" EnableViewState="False" Width="500px" Height="189px">
+            <ClientSideEvents PopUp="function(s, e) { cbxBDPTNO.Focus(); }" Init="function(s, e) {
+pclSearchPanelInit();
+}" />
+            <ContentCollection>
+                <dx:PopupControlContentControl runat="server">
+                    <dx:ASPxPanel ID="Panel1" runat="server" DefaultButton="btOK">
+                        <PanelCollection>
+                            <dx:PanelContent runat="server">
+                                <table width="100%">
+                                    <tr>
+                                        <td rowspan="8" class="auto-style1">
+                                            <div class="pcmSideSpacer">
+                                            </div>
+                                        </td>
+                                        <td class="auto-style2">
+                                            <dx:ASPxLabel ID="ASPxLabel5" runat="server" AssociatedControlID="lblBDPTNO" Text="部門">
+                                            </dx:ASPxLabel>
+                                        </td>
+                                        <td class="auto-style7">
+                                            <dx:ASPxComboBox ID="cbxBDPTNO" runat="server" ClientInstanceName="cbxBDPTNO" DataSourceID="sdsDpts" TextField="DPTNM" ValueField="DPTNO" Width="100%">
+                                                <ClientSideEvents SelectedIndexChanged="function(s, e) {OnBDPTNOChanged(s)	
+}" />
+                                            </dx:ASPxComboBox>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="auto-style6"></td>
+                                        <td class="auto-style5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="1" class="auto-style2">
+                                            <dx:ASPxLabel ID="ASPxLabel1" runat="server" AssociatedControlID="lblBACNTYR" Text="設計師">
+                                            </dx:ASPxLabel>
+                                        </td>
+                                        <td class="auto-style7">
+                                            <dx:ASPxComboBox ID="cbxBPRSNNO" runat="server" ClientInstanceName="cbxBPRSNNO" TextField="PRSNNM" ValueField="PRSNNO" Width="100%" DataSourceID="sdsPrsns">
+                                            </dx:ASPxComboBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style2">&nbsp;</td>
+                                        <td class="auto-style7">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style2"></td>
+                                        <td class="auto-style7">
+                                            <div class="pcmButton">
+                                                <dx:ASPxButton ID="btnGoFilter" runat="server" AutoPostBack="False" OnClick="btnGoFilter_Click" Style="float: left; margin-right: 8px" Text="設定" Width="80px" CausesValidation="False" ValidationGroup="entryGroup">
+                                                    <ClientSideEvents Click="function(s, e) {
+}" />
+                                                </dx:ASPxButton>
+                                                <dx:ASPxButton ID="btnCancel" runat="server" AutoPostBack="False" Style="float: right; margin-right: 8px" Text="取消" Width="80px">
+                                                    <ClientSideEvents Click="function(s, e) { pclSearchPanel.Hide(); }" />
+                                                </dx:ASPxButton>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </dx:PanelContent>
+                        </PanelCollection>
+                    </dx:ASPxPanel>
+                </dx:PopupControlContentControl>
+            </ContentCollection>
+            <ContentStyle>
+                <Paddings PaddingBottom="5px" />
+            </ContentStyle>
+        </dx:ASPxPopupControl>      --%>
         <dx:ASPxGridViewExporter ID="MainDBGridExporter" runat="server" GridViewID="MainDBGrid">
             <Styles>
                 <Header Font-Names="Arial Unicode MS">
@@ -229,46 +289,16 @@ WHERE EMPNO=@EMPNO;">
                 <asp:Parameter Name="PHONE" />
                 <asp:Parameter Name="ADDRESS" />
             </InsertParameters>
-        </asp:sqldatasource>
+        </asp:sqldatasource>      
 
-        <%--       <dx:GridViewDataTextColumn Caption="機器代碼" FieldName="MACHINID" ShowInCustomizationForm="True" VisibleIndex="1" Width="8%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="機器名稱" FieldName="MACHINNM" ShowInCustomizationForm="True" VisibleIndex="2" Width="14%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="機器產能" FieldName="CAPACITY" ShowInCustomizationForm="True" VisibleIndex="3" Width="6%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="產線代碼" FieldName="MLINEID" ShowInCustomizationForm="True" VisibleIndex="4" Width="6%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="產線名稱" FieldName="MLINENM" ShowInCustomizationForm="True" VisibleIndex="5" Width="12%">
-                            </dx:GridViewDataTextColumn>
-                            <dx:GridViewDataTextColumn Caption="廠區名稱" FieldName="FACTNM" ShowInCustomizationForm="True" VisibleIndex="6" Width="12%">
-                            </dx:GridViewDataTextColumn>--%>
-        <%--<asp:SqlDataSource ID="sdsMachine" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>" DeleteCommand="DELETE FROM [Machine] WHERE [MACHINID] = @MACHINID" InsertCommand="INSERT INTO [Machine] ([MACHINID], [MACHINNM], [CAPACITY], [LOADRATE], [MACHINDESC], [MLINEID]) VALUES (@MACHINID, @MACHINNM, @CAPACITY, @LOADRATE, @MACHINDESC, @MLINEID)" SelectCommand="SELECT Machine.MACHINID, Machine.MACHINNM, Machine.CAPACITY, Machine.LOADRATE, Machine.MACHINDESC, 
- Machine.MLINEID, ManuLine.MLINENM, Fact.FACTNM
-FROM Machine LEFT JOIN ManuLine ON (Machine.MLINEID = ManuLine.MLINEID)
- LEFT JOIN Fact ON (ManuLine.FACTNO = Fact.FACTNO) 
-ORDER BY Machine.MACHINID"
-            UpdateCommand="UPDATE [Machine] SET [MACHINNM] = @MACHINNM, [CAPACITY] = @CAPACITY, [LOADRATE] = @LOADRATE, [MACHINDESC] = @MACHINDESC, [MLINEID] = @MLINEID WHERE [MACHINID] = @MACHINID">
-            <DeleteParameters>
-                <asp:Parameter Name="MACHINID" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="MACHINID" Type="String" />
-                <asp:Parameter Name="MACHINNM" Type="String" />
-                <asp:Parameter Name="CAPACITY" Type="Double" />
-                <asp:Parameter Name="LOADRATE" Type="Double" />
-                <asp:Parameter Name="MACHINDESC" Type="String" />
-                <asp:Parameter Name="MLINEID" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="MACHINNM" Type="String" />
-                <asp:Parameter Name="CAPACITY" Type="Double" />
-                <asp:Parameter Name="LOADRATE" Type="Double" />
-                <asp:Parameter Name="MACHINDESC" Type="String" />
-                <asp:Parameter Name="MLINEID" Type="String" />
-                <asp:Parameter Name="MACHINID" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>--%>
+        <asp:SqlDataSource ID="sdsDpts" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>" SelectCommand="SELECT Dpt.DPTNO, Dpt.DPTNM, Dpt.DPTHANDLER, Dpt.DPTADDR, Dpt.DPTZIPCD, Dpt.DPTTELNO, Dpt.DPTFAXNO, Dpt.DPTEMAILBOX,Dpt.WEBSITE ,Dpt.OPRTDESC ,Dpt.OPRTPERD, Dpt.PHOTOFILENM FROM Dpt WHERE Dpt.ISSHOP = 1"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sdsPrsns" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>" SelectCommand="SELECT [PRSNNO], [PRSNNM] FROM [Prsn]
+WHERE Prsn.DPTNO=@DPTNO AND Prsn.QUITDT IS NULL">
+            <SelectParameters>
+                <asp:SessionParameter Name="DPTNO" SessionField="DPTNO" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+
 
     </form>
 </body>

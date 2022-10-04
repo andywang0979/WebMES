@@ -1158,6 +1158,9 @@ public class DBUtility
     }
      */
 
+    /// <summary>取得標題資源</summary>
+    /// <param name="ResourcesFile">檔案資源</param> 
+    /// <param name="FieldName">檔案名稱</param> 
     public static string ObtainResCaption(string ResourcesFile, string FieldName)
     {
         try

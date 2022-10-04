@@ -35,10 +35,11 @@ namespace WebMES.Admin
         //    }
         //}
 
-        protected override void btnGoFilter_Click(object sender, EventArgs e)
-        {
+        //撰寫由使用者設定的條件篩選符合資料的程式碼
+        //protected override void btnGoFilter_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         /*
         public static Control GetPostBackControl(System.Web.UI.Page page)//取得是哪個控制項觸發 Postback
@@ -94,10 +95,10 @@ namespace WebMES.Admin
             //e.DisplayText = e.Value+"%";
         }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            MainDBGrid.CancelEdit();
-        }
+        //protected void btnCancel_Click(object sender, EventArgs e)
+        //{
+        //    MainDBGrid.CancelEdit();
+        //}
 
         protected void MainDBGridMenu_ItemClick(object source, MenuItemEventArgs e)
         {
