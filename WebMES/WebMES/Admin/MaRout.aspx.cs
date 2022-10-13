@@ -174,8 +174,11 @@ namespace WebMES.Admin
             base.Page_Init(sender, e);
             //調閱畫面使用外在VRecACPage.aspx顯示時, 因此不會呼叫下列 cbkfloMainDB_Callback 來設定
             AEDContentUrl = "MaRoutPage.aspx";
+            //strEditKey編輯/刪除時該筆資料的Key
             strEditKey = "MANO;MROUTID";
+            //strEditContentUrl編輯時: ASPxPopupControl.ContentUrl要開啟的網頁 & 參數
             strEditContentUrl = "'MaRoutPage.aspx?PopupForm=MaRout.aspx.aspx&EditMode=2&MANO=' + values[0] + '&MROUTID=' + values[1]";
+            //strDeleteContentUrl 刪除時: ASPxPopupControl.ContentUrl要開啟的網頁 & 參數
             strDeleteContentUrl = "'MaRoutPage.aspx?PopupForm=MaRout.aspx.aspx&EditMode=3&MANO=' + values[0] + '&MROUTID=' + values[1]";
             if (!IsPostBack)
             {
@@ -563,6 +566,7 @@ namespace WebMES.Admin
             string MasterKeyValue = (sender as ASPxGridView).GetMasterRowKeyValue().ToString();
             int index = MainDBGrid.FindVisibleIndexByKeyValue(MasterKeyValue);
             ASPxGridView CurSubDBGrid = MainDBGrid.FindDetailRowTemplateControl(index, "SubDBGrid") as ASPxGridView;
+            //是否正在編輯新行
             if (CurSubDBGrid.IsNewRowEditing)
                 return;
             if (e.Column.FieldName == "MROUTSRNO")
@@ -1089,6 +1093,11 @@ namespace WebMES.Admin
             DeleteCmd = "DELETE FROM MaRoutBom "
                  + "WHERE MaRoutBom.MANO='" + CurMANO.ToString() + "' AND MaRoutBom.MROUTID='" + CurMROUTID.ToString() + "' ";
             DBUtility.ExecuteScalar(WebConfigurationManager.ConnectionStrings["WinSisTmplConnectionString"].ConnectionString, DeleteCmd);
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
         }
 
         /*

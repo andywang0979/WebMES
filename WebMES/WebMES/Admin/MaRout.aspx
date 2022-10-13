@@ -692,7 +692,6 @@ calcPFNHQTY();
             </PanelCollection>
         </dx:ASPxPanel>
 
-
         <script type="text/javascript">
             // <![CDATA[
             ASPxClientControl.GetControlCollection().ControlsInitialized.AddHandler(function (s, e) {

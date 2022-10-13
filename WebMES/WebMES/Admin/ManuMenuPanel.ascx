@@ -88,8 +88,10 @@
                     <%--雙檔開發 star--%>
                     <dx:NavBarGroup Text="雙檔-網格-編輯:DevDFEditGrid" Expanded="False" Name="TD000">
                         <Items>
-                            <dx:NavBarItem Text="製程機器設定" NavigateUrl="~/Admin/ManuMach2.aspx" Name="TD001" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
-                            </dx:NavBarItem>                       
+                               <dx:NavBarItem Text="產品製途設定2" NavigateUrl="~/Admin/MaRout2.aspx" Name="TD001" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
+                            </dx:NavBarItem>     
+                            <dx:NavBarItem Text="製程機器設定2" NavigateUrl="~/Admin/ManuMach2.aspx" Name="TD001" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
+                            </dx:NavBarItem>                     
                         </Items>
                         <ItemStyle>
                             <Paddings PaddingLeft="20px" PaddingRight="0px" />

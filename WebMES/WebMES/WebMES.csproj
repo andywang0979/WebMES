@@ -105,7 +105,9 @@
     <Content Include="Admin\ManuMach2.aspx" />
     <Content Include="Admin\ManuMenuPanel.ascx" />
     <Content Include="Admin\MaRout.aspx" />
+    <Content Include="Admin\MaRout2.aspx" />
     <Content Include="Admin\MaRoutPage.aspx" />
+    <Content Include="Admin\MaRoutPage2.aspx" />
     <Content Include="Admin\OrganMain.aspx" />
     <Content Include="bin\ComnUtility.dll" />
     <Content Include="bin\CPC.Utility.dll" />
@@ -420,6 +422,20 @@
     </Compile>
     <Compile Include="Admin\ManuMach2.aspx.designer.cs">
       <DependentUpon>ManuMach2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MaRout2.aspx.cs">
+      <DependentUpon>MaRout2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MaRout2.aspx.designer.cs">
+      <DependentUpon>MaRout2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MaRoutPage2.aspx.cs">
+      <DependentUpon>MaRoutPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MaRoutPage2.aspx.designer.cs">
+      <DependentUpon>MaRoutPage2.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Lead_Publ.cs" />
     <Content Include="Default.aspx" />
