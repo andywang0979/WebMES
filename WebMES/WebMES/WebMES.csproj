@@ -107,8 +107,9 @@
     <Content Include="Admin\MaRout.aspx" />
     <Content Include="Admin\MaRout2.aspx" />
     <Content Include="Admin\MaRoutPage.aspx" />
-    <Content Include="Admin\MaRoutPage2.aspx" />
     <Content Include="Admin\OrganMain.aspx" />
+    <Content Include="Admin\PushManagement.aspx" />
+    <Content Include="Admin\PushManagementPage.aspx" />
     <Content Include="bin\ComnUtility.dll" />
     <Content Include="bin\CPC.Utility.dll" />
     <Content Include="bin\CPC.Web.UI.dll" />
@@ -430,12 +431,25 @@
     <Compile Include="Admin\MaRout2.aspx.designer.cs">
       <DependentUpon>MaRout2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\MaRoutPage2.aspx.cs">
-      <DependentUpon>MaRoutPage2.aspx</DependentUpon>
+    <Compile Include="Admin\PushManagement.aspx.cs">
+      <DependentUpon>PushManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\MaRoutPage2.aspx.designer.cs">
-      <DependentUpon>MaRoutPage2.aspx</DependentUpon>
+    <Compile Include="Admin\PushManagement.aspx.designer.cs">
+      <DependentUpon>PushManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PushManagementPage.aspx.cs">
+      <DependentUpon>PushManagementPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PushManagementPage.aspx.designer.cs">
+      <DependentUpon>PushManagementPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\DevDFEditGrid.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\DevSFEditGrid.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Lead_Publ.cs" />
     <Content Include="Default.aspx" />

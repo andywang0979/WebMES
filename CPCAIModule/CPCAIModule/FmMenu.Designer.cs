@@ -518,6 +518,7 @@
             this.button30.Text = "F6.8D報告資料";
             this.button30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button29
             // 
@@ -533,6 +534,7 @@
             this.button29.Text = "F5.不合格品管理資料";
             this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button28
             // 
@@ -548,6 +550,7 @@
             this.button28.Text = "F3.供應商品質管理資料";
             this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button27
             // 
@@ -563,6 +566,7 @@
             this.button27.Text = "F4.製品檢驗計畫";
             this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button26
             // 
@@ -593,6 +597,7 @@
             this.button25.Text = "F1.進料檢驗計畫資料建檔作業";
             this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // groupBox5
             // 

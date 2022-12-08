@@ -583,6 +583,8 @@ calcPFNHQTY();
                             </EditForm>
 
                             <HeaderFilter MinHeight="140px"></HeaderFilter>
+
+<FilterControl AutoUpdatePosition="False"></FilterControl>
                         </SettingsPopup>
                         <SettingsSearchPanel CustomEditorID="SearchTextBox" />
                         <SettingsText CommandDelete="刪除" CommandEdit="編輯" CommandNew="新增" SearchPanelEditorNullText="請輸入關鍵字" CommandCancel="取消" CommandUpdate="存入" Title="產品製途設定" ConfirmDelete="確定刪除此筆紀錄 ?" PopupEditFormCaption="產品製途編輯" />
@@ -691,6 +693,7 @@ calcPFNHQTY();
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
+
 
         <script type="text/javascript">
             // <![CDATA[
@@ -1179,3 +1182,4 @@ WHERE MaRout.MANO=@MANO
     </form>
 </body>
 </html>
+

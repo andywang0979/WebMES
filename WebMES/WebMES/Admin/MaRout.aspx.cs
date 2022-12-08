@@ -174,11 +174,8 @@ namespace WebMES.Admin
             base.Page_Init(sender, e);
             //調閱畫面使用外在VRecACPage.aspx顯示時, 因此不會呼叫下列 cbkfloMainDB_Callback 來設定
             AEDContentUrl = "MaRoutPage.aspx";
-            //strEditKey編輯/刪除時該筆資料的Key
             strEditKey = "MANO;MROUTID";
-            //strEditContentUrl編輯時: ASPxPopupControl.ContentUrl要開啟的網頁 & 參數
             strEditContentUrl = "'MaRoutPage.aspx?PopupForm=MaRout.aspx.aspx&EditMode=2&MANO=' + values[0] + '&MROUTID=' + values[1]";
-            //strDeleteContentUrl 刪除時: ASPxPopupControl.ContentUrl要開啟的網頁 & 參數
             strDeleteContentUrl = "'MaRoutPage.aspx?PopupForm=MaRout.aspx.aspx&EditMode=3&MANO=' + values[0] + '&MROUTID=' + values[1]";
             if (!IsPostBack)
             {
@@ -670,9 +667,9 @@ namespace WebMES.Admin
             sdsMaRout.InsertParameters["MROUTNM"].DefaultValue = cbxRMROUTID.Text + "-" + TargMROUTID;
             sdsMaRout.InsertParameters["BTCHPDQTY"].DefaultValue = tbxRTARGBTCHPDQTY.Value.ToString();
             sdsMaRout.InsertParameters["TSPREPHMANTICK"].DefaultValue = ojtTSPREPHMANTICK == null ? "0" : ojtTSPREPHMANTICK.ToString();
-            sdsMaRout.InsertParameters["TSPREPMACHTICK"].DefaultValue = ojtTSPREPMACHTICK == null ? "0"  : ojtTSPREPMACHTICK.ToString();
-            sdsMaRout.InsertParameters["TSBTCHHMANTICK"].DefaultValue = ojtTSBTCHHMANTICK  == null ? "0"  : ojtTSBTCHHMANTICK.ToString();
-            sdsMaRout.InsertParameters["TSBTCHMACHTICK"].DefaultValue = ojtTSBTCHMACHTICK  == null ? "0"  : ojtTSBTCHMACHTICK.ToString();
+            sdsMaRout.InsertParameters["TSPREPMACHTICK"].DefaultValue = ojtTSPREPMACHTICK == null ? "0" : ojtTSPREPMACHTICK.ToString();
+            sdsMaRout.InsertParameters["TSBTCHHMANTICK"].DefaultValue = ojtTSBTCHHMANTICK == null ? "0" : ojtTSBTCHHMANTICK.ToString();
+            sdsMaRout.InsertParameters["TSBTCHMACHTICK"].DefaultValue = ojtTSBTCHMACHTICK == null ? "0" : ojtTSBTCHMACHTICK.ToString();
             sdsMaRout.Insert();
 
             //新增製途程序
@@ -1093,11 +1090,6 @@ namespace WebMES.Admin
             DeleteCmd = "DELETE FROM MaRoutBom "
                  + "WHERE MaRoutBom.MANO='" + CurMANO.ToString() + "' AND MaRoutBom.MROUTID='" + CurMROUTID.ToString() + "' ";
             DBUtility.ExecuteScalar(WebConfigurationManager.ConnectionStrings["WinSisTmplConnectionString"].ConnectionString, DeleteCmd);
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
         }
 
         /*
