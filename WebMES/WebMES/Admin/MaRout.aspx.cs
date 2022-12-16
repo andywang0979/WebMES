@@ -1092,6 +1092,11 @@ namespace WebMES.Admin
             DBUtility.ExecuteScalar(WebConfigurationManager.ConnectionStrings["WinSisTmplConnectionString"].ConnectionString, DeleteCmd);
         }
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /*
         protected void SubDBGrid_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
