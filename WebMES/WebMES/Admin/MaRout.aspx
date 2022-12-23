@@ -1042,7 +1042,7 @@ HidepclEditPagePanel('btnSubmit');
 
         <asp:SqlDataSource ID="sdsMaRout" runat="server" ConnectionString="<%$ ConnectionStrings:WinSisTmplConnectionString %>" DeleteCommand="DELETE FROM [MaRout] WHERE [MANO] = @MANO AND [MROUTID] = @MROUTID" InsertCommand="INSERT INTO MaRout(MANO, MROUTID, MROUTNM, MROUTDESC, BTCHPDQTY, TSPREPHMANTICK, TSPREPMACHTICK, TSBTCHHMANTICK, TSBTCHMACHTICK, ISWODEFAULT) VALUES (@MANO, @MROUTID, @MROUTNM, @MROUTDESC, @BTCHPDQTY, @TSPREPHMANTICK, @TSPREPMACHTICK, @TSBTCHHMANTICK, @TSBTCHMACHTICK, @ISWODEFAULT)" SelectCommand="SELECT MaRout.MANO, Ma.MADESC, Ma.MASPEC, Ma.RTUNITNM, MaRout.MROUTID, MaRout.MROUTNM, MaRout.MROUTDESC, MaRout.BTCHPDQTY, MaRout.TSPREPHMANTICK ,MaRout.TSPREPMACHTICK ,MaRout.TSBTCHHMANTICK  ,MaRout.TSBTCHMACHTICK,  MaRout.ISWODEFAULT, Ma.RTUNITNM
 FROM MaRout LEFT JOIN Ma ON (MaRout.MANO = Ma.MANO)"
-            UpdateCommand="UPDATE [MaRout] SET [MROUTNM] = @MROUTNM, [MROUTDESC] = @MROUTDESC, [BTCHPDQTY] = @BTCHPDQTY WHERE [MANO] = @MANO AND [MROUTID] = @MROUTID" OnDeleted="sdsMaRout_Deleted">
+            UpdateCommand="UPDATE [MaRout] SET [MROUTNM] = @MROUTNM, [MROUTDESC] = @MROUTDESC, [BTCHPDQTY] = @BTCHPDQTY WHERE [MANO] = @MANO AND [MROUTID] = @MROUTID" OnDeleted="sdsMaRout_Deleted" ProviderName="<%$ ConnectionStrings:WinSisTmplConnectionString.ProviderName %>">
             <DeleteParameters>
                 <asp:Parameter Name="MANO" Type="String" />
                 <asp:Parameter Name="MROUTID" Type="String" />

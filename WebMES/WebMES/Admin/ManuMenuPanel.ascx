@@ -20,6 +20,12 @@
                             </dx:NavBarItem>
                             <dx:NavBarItem Text="編輯功能" NavigateUrl="~/Test/TW004.aspx" Name="TW004" ToolTip="包含增刪修，繼承自 DevSFEditGrid">
                             </dx:NavBarItem>
+                            <dx:NavBarItem Text="編輯功能(未完整)" NavigateUrl="~/Test/TW005.aspx" Name="TW005" ToolTip="包含增刪修，繼承自 DevSFEditTPagGrid">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="編輯功能(雙)" NavigateUrl="~/Test/TW006.aspx" Name="TW006" ToolTip="包含增刪修，繼承自 DevDFEditGrid">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="編輯功能(雙)-2" NavigateUrl="~/Test/TW007.aspx" Name="TW007" ToolTip="包含增刪修，繼承自 DevDFEditGrid">
+                            </dx:NavBarItem>
                         </Items>
                         <ItemStyle>
                             <Paddings PaddingLeft="20px" PaddingRight="0px" />
@@ -70,51 +76,8 @@
                             <Paddings PaddingLeft="20px" PaddingRight="0px" />
                         </ItemStyle>
                     </dx:NavBarGroup>
-                    <%--單檔開發 star--%>
-                    <dx:NavBarGroup Text="單檔-網格-編輯:DevSFEditGrid" Expanded="False" Name="TD000">
-                        <Items>
-                            <dx:NavBarItem Text="機器設定" NavigateUrl="~/Admin/Machine2.aspx" Name="TD001" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
-                            </dx:NavBarItem>
-                            <dx:NavBarItem Text="客戶資料維護" NavigateUrl="~/Admin/CustAC2.aspx" Name="TD002" ToolTip="單檔-網格-編輯 DevSFEditGrid 範例">
-                            </dx:NavBarItem>
-                            <dx:NavBarItem Text="員工資料維護" NavigateUrl="~/Admin/Emp.aspx" Name="TD003" ToolTip="單檔-網格-調閱編輯 DevDFEditTPagGrid">
-                            </dx:NavBarItem>
-                        </Items>
-                        <ItemStyle>
-                            <Paddings PaddingLeft="20px" PaddingRight="0px" />
-                        </ItemStyle>
-                    </dx:NavBarGroup>
-                    <%--單檔開發 end--%>
-                    <%--雙檔開發 star--%>
-                    <dx:NavBarGroup Text="雙檔-網格-編輯:DevDFEditGrid" Expanded="False" Name="TD000">
-                        <Items>
-                               <dx:NavBarItem Text="產品製途設定2" NavigateUrl="~/Admin/MaRout2.aspx" Name="TD001" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
-                            </dx:NavBarItem>     
-                            <dx:NavBarItem Text="製程機器設定2" NavigateUrl="~/Admin/ManuMach2.aspx" Name="TD002" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
-                            </dx:NavBarItem>                     
-                        </Items>
-                        <ItemStyle>
-                            <Paddings PaddingLeft="20px" PaddingRight="0px" />
-                        </ItemStyle>
-                    </dx:NavBarGroup>
-                    <%--雙檔開發 end--%>
-                     <%--模組開發 star--%>
-                                        <dx:NavBarGroup Text="模組開發" Expanded="False" Name="TD000">
-                        <Items>
-                               <dx:NavBarItem Text="推播管理" NavigateUrl="~/Admin/PushManagement.aspx" Name="TD001" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
-                            </dx:NavBarItem>     
-                            <dx:NavBarItem Text="績效管理" NavigateUrl="~/Admin/PerManagement.aspx" Name="TD002" ToolTip="雙檔-網格-編輯:DevDFEditGrid">
-                            </dx:NavBarItem>                     
-                        </Items>
-                        <ItemStyle>
-                            <Paddings PaddingLeft="20px" PaddingRight="0px" />
-                        </ItemStyle>
-                    </dx:NavBarGroup>
-                    <%--模組開發 end--%>
-
                     <dx:NavBarGroup Expanded="False" Name="L0000" NavigateUrl="~\Admin\Default.aspx" Text="尚未登入">
                     </dx:NavBarGroup>
-
                 </Groups>
             </dx:ASPxNavBar>
         </dx:PanelContent>

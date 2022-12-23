@@ -1038,22 +1038,6 @@ namespace WebMES.Admin
         {
             string CurMANO = e.Parameters;
             ASPxTextBox edMADESC = (ASPxTextBox)MainDBGrid.FindEditRowCellTemplateControl((GridViewDataTextColumn)MainDBGrid.Columns["MADESC"], "edMADESC");
-            ASPxTextBox edMASPEC = (ASPxTextBox)MainDBGrid.FindEditRowCellTemplateControl((GridViewDataTextColumn)MainDBGrid.Columns["MASPEC"], "edMASPEC");
-            ASPxTextBox edMROUTID = (ASPxTextBox)MainDBGrid.FindEditRowCellTemplateControl((GridViewDataTextColumn)MainDBGrid.Columns["MROUTID"], "edMROUTID");
-            string cmd = "SELECT Ma.MANO, Ma.MADESC, Ma.MASPEC, Ma.MACOLOR, Ma.MAUSAGE, Ma.ATTRIB, "
-                     + "Ma.PKUNITNM, Ma.RTUNITNM, Ma.PK2RTEXGRATE, Ma.INVQTY, Ma.UNITCOST, "
-                     + "Ma.UNITPRIC, Ma.LOCANO, Ma.BARCODE, Ma.MACDNO, Ma.MAKDNO, Ma.ISINV "
-                     + "FROM Ma "
-                     + "WHERE Ma.MANO='" + CurMANO + "' ";
-            DataTable MaDataTable = DBUtility.RefetchDataTable(WebConfigurationManager.ConnectionStrings["WinSisTmplConnectionString"].ConnectionString, cmd);
-            if (MaDataTable.Rows.Count > 0)
-            {
-                edMADESC.Text = MaDataTable.Rows[0]["MADESC"].ToString();
-                edMASPEC.Text = MaDataTable.Rows[0]["MASPEC"].ToString();
-            }
-            //抓編碼最大值
-            string NewMROUTID = DBUtility.RAdoGetFormatCode(WebConfigurationManager.ConnectionStrings["WinSisTmplConnectionString"].ConnectionString, "MaRout", "MROUTID", "MANO='" + CurMANO + "'", true, "#####", Convert.ToDateTime(null), "");
-            edMROUTID.Value = NewMROUTID;
         }
 
         protected void MainDBGrid_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)

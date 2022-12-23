@@ -93,6 +93,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Test\TW006.aspx.cs">
+      <DependentUpon>TW006.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TW006.aspx.designer.cs">
+      <DependentUpon>TW006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TW006Page.aspx.cs">
+      <DependentUpon>TW006Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TW006Page.aspx.designer.cs">
+      <DependentUpon>TW006Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TW007.aspx.cs">
+      <DependentUpon>TW007.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TW007.aspx.designer.cs">
+      <DependentUpon>TW007.aspx</DependentUpon>
+    </Compile>
     <Content Include="Admin\CustAC.aspx" />
     <Content Include="Admin\CustAC2.aspx" />
     <Content Include="Admin\CustACPage.aspx" />
@@ -458,6 +479,9 @@
     <Content Include="Query\WoODueList.aspx" />
     <Content Include="Query\WoRoutMachNowList.aspx" />
     <Content Include="stylesheets\main.css" />
+    <Content Include="Test\TW006.aspx" />
+    <Content Include="Test\TW006Page.aspx" />
+    <Content Include="Test\TW007.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
